@@ -1,6 +1,6 @@
 // ionclude all your related style here in the header, you can leave it empty if the page has no header
-html, body { 
-	height:100%; 
+html, body {
+	height:100%;
 	min-height:100%;
 	font-family: $defaultFont;
 	font-weight: 300;
@@ -8,7 +8,7 @@ html, body {
 	line-height: 1.4;
 	font-size: 16px;
 	-webkit-text-size-adjust: none;
-} 
+}
 
 body.window {
 	-webkit-font-smoothing: antialiased;
@@ -23,19 +23,19 @@ body.window {
 
 /*@media screen and (max-device-width: 480px){
   body{
-    
+
   }
 }*/
 
-.hide { 
+.hide {
 	position:relative;
 }
 
-.ease,a,input[type="submit"],button { 
+.ease,a,input[type="submit"],button {
 
 	@include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
 }
-	
+
 a {
 	outline: none;
 	color: $defaultLinkColor;
@@ -46,15 +46,15 @@ em {
 	font-style: italic;
 }
 
-.loader { 
-	position:relative; 
-	overflow:hidden; 
-	background:#fff url('../images/page_template/loading.gif') no-repeat center; 
+.loader {
+	position:relative;
+	overflow:hidden;
+	background:#fff url('../images/page_template/loading.gif') no-repeat center;
 }
 
-#main-container { 
-	height:100%; 
-	height: auto !important; 
+#main-container {
+	height:100%;
+	height: auto !important;
 	min-height:100%;
 	padding-top: 103px;
 	position: relative;
@@ -78,7 +78,7 @@ header {
 	z-index: 1001;
 	box-shadow: 0px 2px 5px rgba($coBlack, 0.05);
 	@include transition(transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
-	
+
 
 	&.home-header {
 		@include transform(translate(0, -100%));
@@ -93,14 +93,14 @@ header {
 
 		.header-wrap {
 			@include breakpoint(tablet2) {
-				background: $coBlue;	
+				background: $coBlue;
 			}
-			
+
 		}
 	}
 
 	&.is-animated {
-		@include transform(translate(0, 0));		
+		@include transform(translate(0, 0));
 	}
 
 	&.scroll-down {
@@ -132,6 +132,29 @@ header {
 
 	.subnav-wrapper {
 		z-index: 9
+	}
+}
+
+.get-wing-app {
+	border: 1px solid $coGreen;
+	color: $coGreen;
+	background-color: #fff;
+	background-image: url('../images/mobile-os.png');
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+	background-size: 32px;
+	display: inline-block;
+	line-height: 1;
+	font-size: 13px;
+	font-weight: 300;
+	padding: 6px 52px 7px 12px;
+	@include border-radius(6px);
+	float: left;
+	margin-right: 15px;
+	&:hover {
+		background-image: url('../images/mobile-os-w.png');
+		background-color: $coGreen;
+		color: #fff;
 	}
 }
 
@@ -522,7 +545,7 @@ header {
 	}
 
 	.nav-box-card {
-		
+
 	}
 
 	.box-menu {
@@ -718,7 +741,7 @@ header {
 		}
 
 		.hv-wrap.hv-wrap-mobile {
-			
+
 			@include transform(translate(0, 0));
 		}
 	}
@@ -761,13 +784,13 @@ header {
 			background: #1a99d7;
 			top: 0px;
 			right: 0;
-			
+
 			@include transition(transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
 
 			@include breakpoint(tablet2) {
 				@include transform(translate(0, -100%));
 			}
-			
+
 
 			@include breakpoint(tablet) {
 				display: block;
@@ -805,7 +828,7 @@ header {
 
 		> li {
 			display: block;
-			
+
 
 
 			a {
@@ -826,7 +849,7 @@ header {
 			}
 		}
 
-		
+
 	}
 
 	hr {
@@ -897,10 +920,10 @@ header {
 		clear: both;
 		margin: 0;
 		display: none;
-		
+
 
 		@include breakpoint(tablet2) {
-			display: block !important;	
+			display: block !important;
 		}
 
 		label {
@@ -967,7 +990,7 @@ header {
 						font-size: 13px;
 					}
 
-					
+
 
 					ul {
 						margin-bottom: 15px;
@@ -1020,7 +1043,7 @@ header {
 				display: block;
 				position: relative;
 				padding-right: 20px;
-				
+
 			}
 		}
 	}
@@ -1110,7 +1133,7 @@ header {
 
 	&.active {
 		@include breakpoint(tablet2) {
-			background: $coBlue;	
+			background: $coBlue;
 		}
 	}
 
@@ -1212,7 +1235,7 @@ header {
 			@include breakpoint(tablet2) {
 				background: $coWhite;
 			}
-			
+
 		}
 	}
 }
@@ -1343,6 +1366,3 @@ header {
 	    }
 	}
 }
-
-
-
