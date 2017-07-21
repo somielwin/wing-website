@@ -1,0 +1,247 @@
+.row-careers-bg {
+	
+
+	a {
+		color: $coWhite;
+	}	
+}
+
+.careers-wrap {
+	margin: 30px 0;
+	padding: 0px 50px;
+
+	@include breakpoint(tablet) {
+		padding: 0;
+	}
+}
+
+.careers-icon {
+	width: 82px;
+	height: 82px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid $coLightBlue;
+
+	@include breakpoint(phablet) {
+		width: 52px;
+		height: 52px;
+	}
+
+	img {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		display: block;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+}
+
+.row-careers-bg {
+
+	ul {
+		
+		li {
+			padding-left: 100px;
+			min-height: 90px;
+			position: relative;
+			margin-bottom: 5px;
+			border-bottom: 1px solid #eee;
+			padding-bottom: 8px;
+
+
+			&:before {
+				content:'';
+				display: none;
+			}
+
+			@include breakpoint(phablet) {
+				padding-left: 60px;
+				min-height: 57px;
+				padding-bottom: 10px;
+				margin-bottom: 8px;
+			}
+
+			a {
+				display: block;
+				color: $coBlue;
+
+				&:after {
+					content:'';
+					display: block;
+					float: none;
+					clear: both;
+				}
+			}
+
+			p {
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	.careers-title {
+		width: 60%;
+		float: left;
+		padding-top: 15px;
+		padding-right: 10px;
+
+		@include breakpoint(tablet2) {
+			padding-top: 4px;
+		}
+
+		@include breakpoint(mobile) {
+			float: none;
+			clear: both;
+			width: 100%;
+		}
+
+		p {
+			font-weight: 500;
+			color: $coOrange;
+
+			@include breakpoint(tablet2) {
+				font-size: 14px;
+			}
+		}
+
+		span {
+			font-size: 12px;
+			color: $defaultColor;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+
+	.careers-loc {
+		width: 20%;
+		float: left;
+		padding-top: 15px;
+		padding-right: 10px;
+
+		@include breakpoint(tablet2) {
+			padding-top: 4px;
+		}
+
+		@include breakpoint(mobile) {
+			float: none;
+			clear: both;
+			width: 100%;
+		}
+
+		p {
+			color: $defaultColor;
+
+			@include breakpoint(tablet2) {
+				font-size: 13px;
+			}
+		}
+	}
+
+	.career-detail {
+		width: 20%;
+		float: left;
+		padding-top: 15px;
+
+		@include breakpoint(tablet2) {
+			padding-top: 4px;
+		}
+
+		@include breakpoint(mobile) {
+			float: none;
+			clear: both;
+			width: 100%;
+			padding-top: 0;
+		}
+
+		p {
+			@include breakpoint(tablet2) {
+				font-size: 13px;
+			}
+		}
+	}
+
+}
+
+.career-info {
+	margin-bottom: 25px;
+
+	span {
+		display: inline-block;
+		margin-right: 15px;
+	}
+
+	.fa {
+		color: $coBlue;
+		display: inline-block;
+		margin-left: 5px;
+		font-size: 18px;
+	}
+}
+
+.load-more-career {
+	margin-top: 15px;
+}
+
+.application-email {
+	display: inline-block;
+	border: 1px solid $coLightBlue;
+	padding: 15px;
+	margin-top: 20px;
+	box-shadow: 0px 0px 10px rgba($coBlack , 0.1);
+	position: relative;
+	margin-top: 25px;
+	border-radius: 4px;
+
+	&:after {
+		content:'';
+		width: 0;
+		height: 0;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid $coLightBlue;
+		position: absolute;
+		top: 0;
+		margin-top: -10px;
+		margin-left: -10px;
+		left: 50%;
+		z-index: 2;
+	}
+}
+
+.careers-filter {
+	padding-bottom: 10px;
+	border-bottom: 1px solid $coLightBlue;
+
+	label {
+		display: inline-block;
+		padding-top: 9px;
+
+		@include breakpoint(tablet2) {
+			padding-bottom: 5px;
+		}
+	}
+
+	.col-sm-4 {
+		padding-right: 0;
+
+		@include breakpoint(tablet2) {
+			padding-right: 15px;
+		}
+	}
+
+	.btn {
+		display: block;
+		margin-top: 0;
+		padding: 6px 10px;
+		text-align: center;
+
+		@include breakpoint(tablet2) {
+			margin-top: 10px
+		}
+	}
+}

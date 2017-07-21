@@ -1,0 +1,291 @@
+.home-slider {
+	width: 100%;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    min-height: 350px;
+    @inclde transition(opacity 0.3s 0.2s cubic-bezier(0.645, 0.045, 0.355, 1));
+    background: #cada2a;
+    max-height: 535px;
+
+    @include breakpoint(tablet2) {
+    	max-height: 100%;
+    }
+
+    &.is-animated {
+    	opacity: 1;
+    }
+}
+
+.table-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 102;
+	display: table;
+
+	.table-cell {
+		height: 100%;
+		vertical-align: middle;
+		display: table-cell;
+	}
+}
+
+.home-flexslider {
+
+	&:before {
+		content:'';
+		height: 45px;
+		position: absolute;
+		bottom: 0;
+		background: $coWhite;
+		width: 100%;
+	}
+
+	ul.slides {
+
+		li.flex-active-slide {
+			position: relative;
+			z-index: 3 !important;
+		}
+	}
+}
+
+.home-slide-text {
+	color: $coWhite;
+	background: rgba($coBlack, 0.4);
+	padding: 15px 30px 30px 30px;
+	opacity: 0;
+	visibility: hidden;
+	@include transition(all 0.4s 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
+	@include transform( translate(0, 50%));
+
+	@include breakpoint(tablet2) {
+		padding: 15px 10px 15px;
+	}
+
+	&.text-left {
+		width: 50%;
+		float: left;
+		text-align: left;
+		@include transform( translate(-50%, 0));
+
+		@include breakpoint(tablet2) {
+			width: 100%;
+			float: none;
+			text-align: left;
+		}
+	}
+
+	&.text-right {
+		width: 50%;
+		float: right;
+		text-align: right;
+		@include transform( translate(50%, 0));
+
+		@include breakpoint(tablet2) {
+			width: 100%;
+			float: none;
+			text-align: right;
+		}
+	}
+
+	h1 {
+		font-weight: 300;
+		font-family: $fontA;
+		margin-bottom: 30px;
+
+		@include breakpoint(tablet) {
+			font-size: 45px;
+			line-height: 55px;
+		}
+
+		@include breakpoint(tablet2) {
+			font-size: 35px;
+			line-height: 45px;
+			margin-bottom: 15px;
+		}
+	}
+
+	p {
+		font-size: 18px;
+		margin-bottom: 20px;
+
+		@include breakpoint(tablet2) {
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.coverimage {
+	position: relative;
+    /*min-height: 540px;*/
+    width: 100%;
+    overflow: hidden;
+    min-height: 535px;
+    max-height: 535px;
+    /*height: calc(100vh - 103px);
+    max-height: 768px;*/
+
+    /*@include breakpoint(tablet) {
+		height: calc(100vh - 60px);
+	}
+
+	@include breakpoint(tablet2) {
+		min-height: 380px;
+	}*/
+
+	@include breakpoint(tablet2) {
+		min-height: auto;
+		max-height: 100%;
+	}
+
+}
+
+.home-slide-item {
+	position: relative;
+	overflow: hidden;
+	@include transition(transform 1.5s ease);
+	transform-origin: center center;
+	transform-origin: center center;
+	opacity: 0;
+
+	&.is-animated {
+		transform-origin: center center;
+		opacity: 1;
+	}
+}
+
+
+.home-flexslider {
+	/*height: calc(100vh - 103px);
+	min-height: 540px;*/
+	position: relative;
+	/*max-height: 768px;*/
+	zoom: 1;
+	background: #cada2a;
+
+	@include breakpoint(tablet2) {
+		padding-top: 50px;
+		background: $coGreen;
+	}
+
+	/*@include breakpoint(tablet) {
+		height: calc(100vh - 60px);
+	}
+
+	@include breakpoint(tablet2) {
+		min-height: 380px;
+	}*/
+
+	li.flex-active-slide {
+
+		.home-slide-text {
+
+			opacity: 1;
+			visibility: visible;
+			@include transform(translate(0, 0));
+		}
+	}
+}
+
+.flexslider .slides img {
+    width: auto;
+    display: block;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include transform(translate(-50%, 0));
+
+    @include breakpoint(tablet2) {
+    	@include transform(translate(0%, 0));
+    	left: 0;
+    	height: auto;
+    	width: 100%;
+    	position: relative;
+    }
+}
+
+.coverimage-desktop {
+	display: block !important;
+
+	@include breakpoint(tablet2) {
+		display: none !important;
+	}
+}
+
+.coverimage-mobile {
+	display: none !important;
+
+	@include breakpoint(tablet2) {
+		display: block !important;
+	}
+}
+
+.home-flexslider {
+
+	.flex-control-nav {
+
+		&.flex-control-paging {
+			position: absolute;
+			bottom: 70px;
+			text-align: center;
+			width: 100%;
+			z-index: 99;
+			padding: 0;
+
+
+			li {
+				display: inline-block;
+				margin: 0px 2px;
+
+
+				a {
+					width: 60px;
+					height: 5px;
+					background: rgba($coBlack, 0.4);
+					position: relative;
+					overflow: hidden;
+					text-indent: -9999px;
+					display: block;
+					text-align: left;
+
+					&.flex-active {
+						background: rgba($coLightBlue, 0.8);
+
+
+						&:after {
+							width: 100%;
+							@include transition(width 5s ease-in);
+							background: $coBlue;
+						}
+					}
+
+					&:after {
+						content:'';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 0;
+						height: 100%;
+						background: transparent;
+						@include transition(width 0s ease-in);
+					}
+				}
+			}
+		}
+	}
+}
+
+.flex-viewport {
+    max-height: 535px;
+    @include transition(all 0.4s ease);
+
+    @include breakpoint(tablet2) {
+    	max-height: 100%;
+    }
+}
