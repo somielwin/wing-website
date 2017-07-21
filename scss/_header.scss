@@ -328,8 +328,8 @@ header {
 
 					&:before {
 						opacity: 1;
-						bottom: 0;
-						@include transition(all 0.3s 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045));
+						bottom: -1px;
+						@include transition(all 0.1s 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045));
 					}
 				}
 
@@ -394,7 +394,7 @@ header {
 
 .header-wrap {
 	position: relative;
-	padding-top: 12px;
+	padding-top: 33px;
 
 	@include breakpoint(tablet2) {
 		padding-top: 0px;
@@ -409,7 +409,7 @@ header {
 
 .logo {
 	position: absolute;
-	top: 0;
+	top: -24px;
 	left: 15px;
 	z-index: 1;
 	max-width: 140px;
@@ -424,9 +424,21 @@ header {
 	}
 
 	img {
-		max-width: 100%;
+		max-width: 121%;
 		height: auto;
 		display: block;
+	}
+
+	p {
+		font-size: 10px;
+		line-height: 12px;
+		position: absolute;
+		left: 0;
+		top: 80px;
+		width: 137px;
+		font-weight: 400;
+		color: $coGreen;
+		font-style: italic;
 	}
 }
 

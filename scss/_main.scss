@@ -540,6 +540,23 @@ ul.bullets, ul.cross {
 	}
 }
 
+ul.icons {
+	li {
+		img {
+			float: left;
+			width: 32px;
+			margin-right: 10px;
+			margin-left: -42px;
+			margin-top: -5px;
+		}
+		list-style: none;
+		padding-left: 42px;
+		margin: 0 0 5px 5px;
+		overflow: hidden;
+		line-height: 22px;
+	}
+}
+
 .layout-1 {
 
 	ul {

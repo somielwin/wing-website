@@ -130,3 +130,36 @@
 		margin-bottom: 10px;
 	}
 }
+
+
+.box-video {
+	position: relative;
+	.play {
+		background-color: rgba(0, 0, 0, 0.6);
+    padding: 16px 28px;
+    float: left;
+    position: absolute;
+		top: 43%;
+		left: 42%;
+		z-index: 1000;
+		@include border-radius(16px);
+
+		span {
+			width: 0px;
+	    height: 0px;
+	    border-top: 9px solid transparent;
+	    border-bottom: 9px solid transparent;
+	    border-left: 17px solid white;
+			float: left;
+			text-indent: -9999px;
+		}
+
+		&:hover {
+			background-color: red;
+			cursor: pointer;
+		}
+	}
+	video {
+		background-color: #000;
+	}
+}
