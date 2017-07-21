@@ -1,12 +1,12 @@
 .row-careers-bg {
-	
+
 
 	a {
 		color: $coWhite;
-	}	
+	}
 }
 
-.careers-wrap {
+.careers-wrap, .the-filter-wrap {
 	margin: 30px 0;
 	padding: 0px 50px;
 
@@ -44,7 +44,7 @@
 .row-careers-bg {
 
 	ul {
-		
+
 		li {
 			padding-left: 100px;
 			min-height: 90px;
@@ -213,7 +213,7 @@
 	}
 }
 
-.careers-filter {
+.careers-filter, .the-filter {
 	padding-bottom: 10px;
 	border-bottom: 1px solid $coLightBlue;
 

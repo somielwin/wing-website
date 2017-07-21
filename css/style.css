@@ -12030,6 +12030,39 @@ a img.aligncenter {
   background-color: #000;
 }
 
+/* line 168, ../scss/pages/_inner.scss */
+.filter-bg .categ-title {
+  background: #00adef;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  /* line 168, ../scss/pages/_inner.scss */
+  .filter-bg .categ-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 168, ../scss/pages/_inner.scss */
+  .filter-bg .categ-title {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+}
+/* line 188, ../scss/pages/_inner.scss */
+.filter-bg.card-list .flex {
+  justify-content: flex-start;
+}
+/* line 191, ../scss/pages/_inner.scss */
+.filter-bg.card-list .flex .card-item {
+  min-width: 198px;
+  max-width: 198px;
+}
+
 /* line 1, ../scss/pages/_news.scss */
 .banner-news {
   max-height: 280px;
@@ -12479,13 +12512,13 @@ a img.aligncenter {
 }
 
 /* line 9, ../scss/pages/_careers.scss */
-.careers-wrap {
+.careers-wrap, .the-filter-wrap {
   margin: 30px 0;
   padding: 0px 50px;
 }
 @media (max-width: 992px) {
   /* line 9, ../scss/pages/_careers.scss */
-  .careers-wrap {
+  .careers-wrap, .the-filter-wrap {
     padding: 0;
   }
 }
@@ -12706,33 +12739,33 @@ a img.aligncenter {
 }
 
 /* line 216, ../scss/pages/_careers.scss */
-.careers-filter {
+.careers-filter, .the-filter {
   padding-bottom: 10px;
   border-bottom: 1px solid #82d9ff;
 }
 /* line 220, ../scss/pages/_careers.scss */
-.careers-filter label {
+.careers-filter label, .the-filter label {
   display: inline-block;
   padding-top: 9px;
 }
 @media (max-width: 767px) {
   /* line 220, ../scss/pages/_careers.scss */
-  .careers-filter label {
+  .careers-filter label, .the-filter label {
     padding-bottom: 5px;
   }
 }
 /* line 229, ../scss/pages/_careers.scss */
-.careers-filter .col-sm-4 {
+.careers-filter .col-sm-4, .the-filter .col-sm-4 {
   padding-right: 0;
 }
 @media (max-width: 767px) {
   /* line 229, ../scss/pages/_careers.scss */
-  .careers-filter .col-sm-4 {
+  .careers-filter .col-sm-4, .the-filter .col-sm-4 {
     padding-right: 15px;
   }
 }
 /* line 237, ../scss/pages/_careers.scss */
-.careers-filter .btn {
+.careers-filter .btn, .the-filter .btn {
   display: block;
   margin-top: 0;
   padding: 6px 10px;
@@ -12740,7 +12773,7 @@ a img.aligncenter {
 }
 @media (max-width: 767px) {
   /* line 237, ../scss/pages/_careers.scss */
-  .careers-filter .btn {
+  .careers-filter .btn, .the-filter .btn {
     margin-top: 10px;
   }
 }

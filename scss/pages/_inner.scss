@@ -163,3 +163,36 @@
 		background-color: #000;
 	}
 }
+.filter-bg {
+
+	.categ-title {
+		background: #00adef;
+			color: #fff;
+			padding: 6px 10px;
+			border-radius: 4px;
+			margin-bottom: 10px;
+			font-size: 20px;
+			text-align: center;
+
+			@include breakpoint(tablet) {
+				font-size: 18px;
+			}
+
+			@include breakpoint(mobile) {
+				font-size: 16px;
+				padding: 5px 10px;
+			}
+	}
+
+	&.card-list {
+		.flex {
+			justify-content: flex-start;
+
+			.card-item {
+				min-width: 198px;
+				max-width: 198px;
+			}
+		}
+
+	}
+}
