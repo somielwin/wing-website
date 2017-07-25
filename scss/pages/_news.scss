@@ -263,15 +263,17 @@
 .news-single-content {
 	margin-bottom: 50px;
 
-	.slip-img {
-		margin-left: -10%;
-		max-width: 110%;
-
+	.featured-img-wrap  {
 		p {
 			font-size: 12px;
 			border-bottom: 1px solid #ddd;
 			margin-bottom: 20px;
 		}
+	}
+
+	.slip-img {
+		margin-left: -5%;
+		max-width: 105%;
 	}
 
 	p {
@@ -422,10 +424,10 @@
 	.h-news-item  h5 {
 		font-weight: 700;
 		text-transform: uppercase;
-
 	}
 
 	p {
+		padding: 6px 0;
 
 		@include breakpoint(tablet2) {
 			font-size: 18px;
