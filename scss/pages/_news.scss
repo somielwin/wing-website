@@ -244,6 +244,9 @@
 	}
 }
 
+.news-single {
+	margin-top: 35px;
+}
 
 .news-single-content {
 	margin-bottom: 50px;
@@ -405,6 +408,36 @@
 			font-size: 18px;
 		}
 
+	}
+}
+
+.side-list {
+	margin-top: 1em;
+	h5 {
+		font-size: 16px;
+	  font-weight: 500;
+		margin-bottom: 10px;
+		color: $coBlue;
+	}
+
+	p {
+		font-size: 14px;
+		padding: 5px 0;
+		border-bottom: 1px solid $coBlue;
+		margin-bottom: 5px;
+
+		a {color: $coBlue;}
+
+		&:last-child {
+			border: 0;
+		}
+	}
+
+	.box {
+		margin-bottom: 50px;
+		img {
+			width: 100%;
+		}
 	}
 }
 
