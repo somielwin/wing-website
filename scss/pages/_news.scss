@@ -16,6 +16,18 @@
 	background: $coWhite;
 }
 
+.inner-banner-text {
+	.categ-wrap {
+		margin-bottom: 10px;
+		display: inline-block;
+		border: 1px solid $coWhite;
+		color: $coWhite;
+		padding: 5px 10px;
+		opacity: 0.8;
+		font-size: 14px;
+	}
+}
+
 .news-img {
 	width: 40%;
 	float: left;
@@ -250,6 +262,11 @@
 
 .news-single-content {
 	margin-bottom: 50px;
+
+	.featured-img-wrap .slip-img {
+		margin-left: -10%;
+		max-width: 110%;
+	}
 
 	p {
 		padding-bottom: 15px;
