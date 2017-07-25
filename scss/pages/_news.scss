@@ -263,9 +263,15 @@
 .news-single-content {
 	margin-bottom: 50px;
 
-	.featured-img-wrap .slip-img {
+	.slip-img {
 		margin-left: -10%;
 		max-width: 110%;
+
+		p {
+			font-size: 12px;
+			border-bottom: 1px solid #ddd;
+			margin-bottom: 20px;
+		}
 	}
 
 	p {
@@ -275,7 +281,7 @@
 	h2, h3, h4, h5, h6 {
 		margin: 20px 0 10px;
 		font-family: $defaultFont;
-		font-weight: 700;
+		font-weight: 500;
 		line-height: 1.2;
 	}
 
