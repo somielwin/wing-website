@@ -113,7 +113,6 @@
 }
 
 .new-listings {
-
 	> li {
 		padding-bottom: 15px;
 		padding-top: 35px;
@@ -121,6 +120,53 @@
 	}
 }
 
+.promo-listings {
+	margin-bottom: 20px;
+	overflow: hidden;
+	li {
+		border: 0;
+	}
+}
+
+.promo-img {
+	width: 100%;
+	position: relative;
+	margin-bottom: 20px;
+
+	.news-tools {
+		margin: 0;
+		padding: 5px 0;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		background-color: $coWhite;
+	}
+}
+
+.promo-content {
+	width: 100%;
+	padding: 0;
+
+	h2 {
+		font-size: 22px;
+		line-height: 26px;
+	}
+
+	.btn {
+		padding: 3px 10px;
+		font-size: 12px;
+		margin-top: 20px;
+	}
+}
+
+.promo-duration {
+	strong {
+		color: #000;
+	}
+	font-weight: bold;
+	color: $coOrange;
+}
 
 .pagination {
 	margin: 30px 0 20px 0;
@@ -241,7 +287,7 @@
 			float: none;
 			clear: both;
 			margin-left: 0;
-		} 
+		}
 	}
 
 	img.alignleft {float:left; margin:0 1em 1em 0; max-width: 100%;
@@ -252,7 +298,7 @@
 			float: none;
 			clear: both;
 			margin-right: 0;
-		} 
+		}
 	}
 	img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin-top: 1em; margin-bottom: 1em; max-width: 100%; height: auto;}
 	a img.alignright {float:right; margin:0 0 1em 1em; max-width: 100%; height: auto;}
@@ -291,7 +337,7 @@
 		}
 
 		li {
-			padding-bottom: 5px;	
+			padding-bottom: 5px;
 		}
 	}
 
@@ -301,7 +347,7 @@
 		padding-left: 25px;
 		list-style-type: decimal;
 		li {
-			padding-bottom: 5px;	
+			padding-bottom: 5px;
 		}
 	}
 
@@ -324,9 +370,9 @@
 	p {
 
 		@include breakpoint(tablet2) {
-			font-size: 18px;	
+			font-size: 18px;
 		}
-		
+
 	}
 }
 
@@ -380,4 +426,3 @@
 		border: 2px solid $coBlue;
 	}
 }
-

@@ -15,7 +15,7 @@
 	}
 }
 
-.careers-icon {
+.careers-icon, .filter-icon {
 	width: 82px;
 	height: 82px;
 	position: absolute;
@@ -41,7 +41,7 @@
 	}
 }
 
-.row-careers-bg {
+.row-careers-bg, .filter-bg {
 
 	ul {
 
@@ -84,7 +84,7 @@
 		}
 	}
 
-	.careers-title {
+	.careers-title, .filter-title {
 		width: 60%;
 		float: left;
 		padding-top: 15px;
@@ -117,7 +117,7 @@
 		}
 	}
 
-	.careers-loc {
+	.careers-loc, .filter-discount {
 		width: 20%;
 		float: left;
 		padding-top: 15px;
@@ -142,7 +142,7 @@
 		}
 	}
 
-	.career-detail {
+	.career-detail, .filter-contact {
 		width: 20%;
 		float: left;
 		padding-top: 15px;
@@ -167,7 +167,7 @@
 
 }
 
-.career-info {
+.career-info, .filter-info {
 	margin-bottom: 25px;
 
 	span {
@@ -224,6 +224,10 @@
 		@include breakpoint(tablet2) {
 			padding-bottom: 5px;
 		}
+	}
+
+	.input-wrap {
+		margin: 0;
 	}
 
 	.col-sm-4 {

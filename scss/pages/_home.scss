@@ -53,9 +53,9 @@
 }
 
 .hl-title {
-	xborder-top: 1px solid $coBorder;
 	border-bottom: 1px solid $coBorder;
-	padding: 12px 0;
+	padding: 12px 0 13px;
+	background-color: $coWhite;
 
 	@include breakpoint(tablet2) {
 		padding: 6px 0;
