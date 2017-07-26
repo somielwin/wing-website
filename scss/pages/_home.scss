@@ -18,7 +18,7 @@
 	}
 
 	.col-sm-4 {
-		
+
 
 		@include breakpoint(tablet) {
 			padding: 0px 8px;
@@ -53,9 +53,9 @@
 }
 
 .hl-title {
-	xborder-top: 1px solid $coBorder;
 	border-bottom: 1px solid $coBorder;
-	padding: 12px 0;
+	padding: 12px 0 13px;
+	background-color: $coWhite;
 
 	@include breakpoint(tablet2) {
 		padding: 6px 0;
@@ -78,7 +78,7 @@
 		padding-top: 40px;
 		padding-bottom: 50px;
 	}
-	
+
 	p {
 		font-size: 16px;
 	}

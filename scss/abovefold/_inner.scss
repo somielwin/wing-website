@@ -205,7 +205,7 @@
 		}
 
 		&.scroll-up {
-			top: 103px;
+			top: 125px;
 
 			@include breakpoint(tablet) {
 				top: 0;
@@ -253,7 +253,6 @@
 		min-height: 31px;
 	}
 }
-
 
 .sec-other-options {
 	display: inline-block;
@@ -457,7 +456,7 @@
 		@include breakpoint(mobile) {
 			min-width: 140px;
 			max-width: 140px;
-			
+
 		}
 	}
 

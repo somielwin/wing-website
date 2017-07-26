@@ -153,7 +153,18 @@
 // example use
 //.class-name { @include pointer-events(none); }
 
-
+//box shadow
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
 
 // for placeholder
 @mixin optional-at-root($sel) {
@@ -193,17 +204,17 @@
   @supports(mix-blend-mode: lighten) {
     display: inline-block;
     position: relative;
-    
+
     &::before {
       content: '';
       display: block;
       position: absolute;
       height: 99%;
-      top: 0; 
+      top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      
+
       background: unquote($gradient);
       pointer-events: none;
     }

@@ -130,3 +130,69 @@
 		margin-bottom: 10px;
 	}
 }
+
+
+.box-video {
+	position: relative;
+	.play {
+		background-color: rgba(0, 0, 0, 0.6);
+    padding: 16px 28px;
+    float: left;
+    position: absolute;
+		top: 43%;
+		left: 42%;
+		z-index: 1000;
+		@include border-radius(16px);
+
+		span {
+			width: 0px;
+	    height: 0px;
+	    border-top: 9px solid transparent;
+	    border-bottom: 9px solid transparent;
+	    border-left: 17px solid white;
+			float: left;
+			text-indent: -9999px;
+		}
+
+		&:hover {
+			background-color: red;
+			cursor: pointer;
+		}
+	}
+	video {
+		background-color: #000;
+	}
+}
+.filter-bg {
+
+	.categ-title {
+		background: #00adef;
+			color: #fff;
+			padding: 6px 10px;
+			border-radius: 4px;
+			margin-bottom: 10px;
+			font-size: 20px;
+			text-align: center;
+
+			@include breakpoint(tablet) {
+				font-size: 18px;
+			}
+
+			@include breakpoint(mobile) {
+				font-size: 16px;
+				padding: 5px 10px;
+			}
+	}
+
+	&.card-list {
+		.flex {
+			justify-content: flex-start;
+
+			.card-item {
+				min-width: 198px;
+				max-width: 198px;
+			}
+		}
+
+	}
+}

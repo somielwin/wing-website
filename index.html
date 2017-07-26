@@ -127,12 +127,18 @@
 	<header>
 		<div class="header-wrap">
 			<div class="container">
-				<div class="logo"><a href="index.html"><img src="images/page_template/logo.png" alt=""></a></div>
+				<div class="logo">
+					<a href="index.html"><img src="images/page_template/logo.png" alt=""></a>
+					<p>&#8220;Cambodia's leading mobile banking services provider.&#8221;</p>
+				</div>
 				<div class="top-header">
-					<div class="login-wrap fl">
+					<a href="#" class="get-wing-app and">Get Wing App!</a>
+					<a href="#" class="get-wing-app ios">Get Wing App!</a>
+					<!--a href="#" class="get-wing-app">Get Wing App!</a-->
+					<!--div class="login-wrap fl">
 						<a href="#">Log in</a>
 						<a href="#" >Register</a>
-					</div>
+					</div-->
 					<div class="switch-language fl">
 						<label>Switch Language</label>
 						<div class="sl-wrap">
@@ -182,13 +188,13 @@
 				</div>
 			</div>
 		</div>
-		
-		<div class="subnav-wrapper is-open">
+
+		<div class="subnav-wrapper">
 			<div class="first-layer">
 				<div class="container small-container">
 					<span class="cross-close"></span>
 					<h6 class="fl-title">Wing Services</h6>
-					
+
 					<ul class="box-menu">
 						<li>
 							<a href="" class="nav-box-card">
@@ -241,10 +247,10 @@
 								</ul>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
-			</div>	
-			
+			</div>
+
 		</div>
 	</header>
 	<section id="main-wrapper">
@@ -258,16 +264,18 @@
 					<li>
 						<div class="home-slide-item">
 							<div class="coverimage">
-								<img class="coverimage-desktop" src="images/home/slide2.jpg" />
-								<img class="coverimage-mobile" src="images/home/slide1-mobile.jpg"/>
+								<img class="coverimage-desktop" src="images/home/gifslide.gif" />
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="home-slide-item">
 							<div class="coverimage">
-								<img class="coverimage-desktop" data-src="images/home/slide2.jpg" src="" />
-								<img class="coverimage-mobile" data-src="images/home/slide1-mobile.jpg" src="" />
+								<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" playsinline autoplay muted loop>
+										<!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+									<source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
+									<source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
+								</video>
 							</div>
 						</div>
 					</li>
@@ -286,7 +294,7 @@
 											<a href="" class="btn btn-small">Banner CTA</a>
 										</div>
 									</div>
-									
+
 								</div>
 							</div> -->
 						</div>
@@ -302,6 +310,32 @@
 				</div>
 			</div>
 			<div class="container max-container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="h-news-item text-center">
+							<h5 class="h-new-title c-orange text-center">Transfer Money</h5>
+							<div class="img-wrap"><a href="#"><img src="images/home/img1.jpg" alt=""></a></div>
+							<p>Pay with Wing to Win Round-Trip Air Tickets</p>
+							<a href="#" class="a-link">Learn More</a>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="h-news-item text-center">
+							<h5 class="h-new-title c-green text-center">Phone Top Up</h5>
+							<div class="img-wrap"><a href="#"><img src="images/home/img1.jpg" alt=""></a></div>
+							<p>Wing Awarded as the Best Mobile Money Services Provider in Cambodia</p>
+							<a href="#" class="a-link">Learn More</a>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="h-news-item text-center">
+							<h5 class="h-new-title c-blue text-center">BIll Payment</h5>
+							<div class="img-wrap"><a href="#"><img src="images/home/img1.jpg" alt=""></a></div>
+							<p>Wing Awarded as the Best Mobile Money Services Provider in Cambodia</p>
+							<a href="#" class="a-link">Learn More</a>
+						</div>
+					</div>
+				</div>
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="h-news-item text-center">
@@ -327,7 +361,6 @@
 								<hr>
 								<h3 class="rates-value">1 USD = <span>4,019.27 KHR</span></h3>
 								<p>US Dollar (USD) <span>vs</span> Cambodia Riel (KHR)</p>
-
 							</div>
 							<a href="#" class="a-link">View All</a>
 						</div>
@@ -349,9 +382,9 @@
 						<div class="col-sm-6">
 							<h2 class="sec-title">Open Your <br>Wing Account <br>NOW!</h2>
 							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta  sunt explicabo.</p>
-							<a href="#" class="btn btn-small">Apply Now</a>
+							<a href="#" class="btn spec btn-small">Apply Now</a>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
@@ -376,7 +409,7 @@
 	<div class="get-wingapp">
 		<div class="container">
 			<div class="wing-app-detail">
-				<h2>Get the Wing App!</h2>
+				<h2><a href="#" class="btn-wing-app">Get the Wing App!</a></h2>
 				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 				<div class="dl-app-wrap">
 					<ul>
@@ -387,10 +420,10 @@
 				</div>
 			</div>
 			<div class="wing-app-img"><img src="images/footer/wingapp.png" alt=""></div>
-			
+
 			<div class="clr"></div>
 			<div class="row wing-app-feature">
-				<div class="col-sm-4"> 
+				<div class="col-sm-4">
 					<div class="wf-item">
 						<h5>Phone Top Up</h5>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
@@ -440,14 +473,25 @@
 					</ul>
 				</div>
 			</div>
-		</div>	
+		</div>
 		<div class="footer-left">
 			<div class="footer-logo"><a href="#"><img src="images/footer/footer-logo.png" alt=""></a></div>
 			<p>Cambodia's leading mobile banking services provider</p>
 			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totamt rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 		</div>
 	</div>
+	<div class="foot-note">
+		<div class="container">
+			<p>&copy; 2017 Wing (Cambodia) Limited Specialised Bank</p>
+		</div>
+	</div>
 </footer>
+<div class="fb-page-like">
+	<div class="fb-frame ease">
+		<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2F&tabs=timeline&width=250&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=344409647148" width="250" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	</div>
+	<a href="javascript:void(0);" class="show-hide"><img src="images/inner/FB-FindUsonFacebook-online-144.png"></a>
+</div>
 <script src="js/lib/jquery.min.js"></script>
 <script src="js/lib/jquery-ui.min.js"></script>
 <script src="js/plugins.js"></script>
@@ -455,8 +499,8 @@
 <script src="js/custom.js"></script>
 
 <script type="text/javascript">
-	if (navigator.appVersion.indexOf("Win")!=-1) { 
-		$('body').addClass('windows'); 
+	if (navigator.appVersion.indexOf("Win")!=-1) {
+		$('body').addClass('windows');
 	}
 </script>
 </body>
