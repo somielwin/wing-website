@@ -85,6 +85,25 @@
 	@include transform(translate(-50%, -50%));
 	z-index: 10;
 
+	&.btn {
+		position: relative;
+		top: 0;
+		left: 0;
+		border: none;
+		width: auto;
+		height: auto;
+		border-radius: 8px;
+		box-shadow: 0;
+		@include transform(translate(0%, 0%));
+		background: $coBlue;
+		padding: 9px 20px;
+    	min-width: auto;
+
+		&:before {
+			display: none;
+		}
+	}
+
 	&:before {
 		content:'';
 		display: block;
@@ -315,7 +334,7 @@
     top: 50%;
     margin: 0 auto;
     transform: translate(0, -50%);
-    padding-bottom: 46%;
+    padding-bottom: 40%;
     background: #000;
 }
 
