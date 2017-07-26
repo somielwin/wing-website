@@ -214,51 +214,7 @@ $(window).load(function() {
 		setTimeout(function() {
 			$('.pace-inactive').hide();
 			$('header').addClass('is-animated');
-			$('.flexslider').flexslider({
-				animation: "slide",
-				slideshowSpeed: 5000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
-    			animationSpeed: 400,
-				slideshow : true,
-				directionNav : false,
-				start: function(slider){
-					//doCoverImage();
-					$('.home-slider').addClass('is-animated');
-					$('.home-latest').addClass('is-animated');
-
-
-					var test = $(slider).find('.flex-active-slide').find('.home-slide-item img').height();
-
-					$(slider).find('li').each(function(){
-
-						var imgH = $(this).find('.home-slide-item img:visible').height();
-						$(this).find('.table-wrap').css({'height' : imgH});
-					});
-
-					setTimeout(function(){
-						$('.home-slide-item').addClass('is-animated');
-
-						$(slider).find("img[data-src]").each(function () {
-				          var src = $(this).attr("data-src");
-				          $(this).attr("src", src).removeAttr("data-src");
-				       });
-					}, 300);
-				},
-
-				after: function(slider) {
-				    /* auto-restart player if paused after action */
-				    if (!slider.playing) {
-				      slider.play();
-				    }
-
-				    $(slider).find('li').each(function(){
-
-						var imgH = $(this).find('.home-slide-item img:visible').height();
-						$(this).find('.table-wrap').css({'height' : imgH});
-					});
-
-				}
-			});
-
+			
 		}, 500);
 	});
 
@@ -359,9 +315,58 @@ function showPlay() {
 		$(".box-video .play").hide();
 }
 
+function adjustHeight() {
+	var wH = window.innerHeight ? window.innerHeight : $(window).height()
+	
+	
+	var cW = $(".video-holder").width(); //width of container or browser
+	var cH = $(".video-holder").height(); //height of container or browser
+	var vW = 16; //width of video ratio
+	var vH = 9; //height of video ratio
+	var cP = cW/cH; //ratio of container or browser
+	var vP = vW/vH; //ratio of video
+
+	if ( $("html").hasClass("mobile") || $("html").hasClass("tablet") ) {
+		// for mobile or tablets, the controls should be visible
+		// so we set the video to the exact size of the container
+		$("video").width(cW);
+		$("video").height(cH);
+		$("video").attr('width', cW);
+		$("video").attr('height', cH);
+	} else {
+		
+		if ( vP > cP ) {
+			//if video ratio is more than container ratio
+			//meaning if video width is more than container width
+			vH = cH; //set video height from container height
+			vW = cH * vP; //set video width using container height and video ratio
+			$("video").css({
+				"margin-top": 0,
+				"margin-left": (cW-vW)/2
+			}); //center the video
+		} else {
+			//if video ratio is less than container ratio
+			//meaning if video height is more than container height
+			vW = cW; //set video width from container width
+			vH = cW / vP; //set video height from container width and ratio
+			$("video").css({
+				"margin-top": (cH-vH)/2,
+				"margin-left": 0
+			}); //center the video
+		}
+		$("video").width(vW); //set the computed width to video/iframe element
+		$("video").height(vH); //set the computed height to the video/iframe element
+		$("video").attr('width', cW);
+		$("video").attr('height', cH);
+		
+	}
+	
+}
+
+
+
 //Facebook Page Like Plugin
-$(document).ready(function()
-{
+$(document).ready(function() {
   $('.show-hide').click(function() {
     if($(this).css("margin-left") == "256px")
     {

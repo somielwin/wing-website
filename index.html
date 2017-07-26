@@ -17,6 +17,12 @@
 </head>
 <body>
 <section id="main-container">
+	<div class="popup-wrap">
+		<div class="popup-content">
+			<a href="#" class="close-video"><img src="https://wing-video-gallery.herokuapp.com/app/images/close.png" width="25" alt=""></a>
+			<div class="video-youtube"></div>
+		</div>
+	</div>
 	<div class="hamburger-nav">
 		<a class="hv-close" href="#"></a>
 		<div class="hv-wrap">
@@ -261,21 +267,20 @@
 		<div class="home-slider">
 			<div class="home-flexslider flexslider">
 				<ul class="slides">
-					<li>
+					<li data-html-video="login.mp4">
 						<div class="home-slide-item">
 							<div class="coverimage">
-								<img class="coverimage-desktop" src="images/home/gifslide.gif" />
+								<img class="coverimage-desktop" src="images/home/slide2.jpg" />
+								<img class="coverimage-mobile" src="images/home/slide1-mobile.jpg"/>
 							</div>
+							<div class="video-holder"></div>
 						</div>
 					</li>
 					<li>
-						<div class="home-slide-item">
+						<div class="home-slide-item" class="play-btn" data-videoid="2E2nCbIZ_Lc">
 							<div class="coverimage">
-								<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" playsinline autoplay muted loop>
-										<!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-									<source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
-									<source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
-								</video>
+								<img class="coverimage-desktop" data-src="images/home/slide2.jpg" src="" />
+								<img class="coverimage-mobile" data-src="images/home/slide1-mobile.jpg" src="" />
 							</div>
 						</div>
 					</li>
@@ -285,18 +290,7 @@
 								<img class="coverimage-desktop" data-src="images/home/slide2.jpg" src="" />
 								<img class="coverimage-mobile" data-src="images/home/slide1-mobile.jpg" src="" />
 							</div>
-							<!-- <div class="table-wrap">
-								<div class="table-cell">
-									<div class="container">
-										<div class="home-slide-text text-right">
-											<h1>Banner For Promo &amp; UVP</h1>
-											<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-											<a href="" class="btn btn-small">Banner CTA</a>
-										</div>
-									</div>
-
-								</div>
-							</div> -->
+							<a href="#" class="play-btn" data-videoid="2E2nCbIZ_Lc"></a>
 						</div>
 					</li>
 				</ul>
@@ -495,6 +489,7 @@
 <script src="js/plugins.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/home.js"></script>
 
 <script type="text/javascript">
 	if (navigator.appVersion.indexOf("Win")!=-1) {
