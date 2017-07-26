@@ -23,6 +23,7 @@ footer {
 	padding: 15px 0;
 	font-size: 14px;
 	color: #fff;
+	height: 50px;
 }
 
 .get-wingapp {
@@ -79,14 +80,13 @@ footer {
 	@include breakpoint(tablet) {
 		padding-top: 30px;
 		padding-right: 0;
-
 	}
 
 	@include breakpoint(phablet) {
 		float: none;
 		clear: both;
 		width: 100%;
-		padding-left: 0;
+
 		padding-bottom: 30px;
 		text-align: center;
 	}
@@ -116,6 +116,10 @@ footer {
 	p {
 		font-size: 16px;
 		color: $coWhite;
+	}
+
+	@include breakpoint(tablet2) {
+		padding: 30px 20px;
 	}
 }
 
