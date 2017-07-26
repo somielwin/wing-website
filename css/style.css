@@ -5765,6 +5765,7 @@ header .subnav-wrapper {
   text-align: center;
   background: #b2c224;
   color: #ffffff;
+  padding: 0;
 }
 
 .social-wrap > ul li a .fa {
@@ -6003,7 +6004,7 @@ header .subnav-wrapper {
   right: -100%;
   height: 100%;
   width: 100%;
-  z-index: 1002;
+  z-index: 2003;
   -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -ms-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -6147,11 +6148,11 @@ header .subnav-wrapper {
   height: auto;
 }
 
-.hv-wrap ul > li {
+.hv-wrap #menu-main-menuen > li {
   display: block;
 }
 
-.hv-wrap ul > li a {
+.hv-wrap #menu-main-menuen > li a {
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
@@ -6160,11 +6161,11 @@ header .subnav-wrapper {
   display: inline-block;
 }
 
-.hv-wrap ul > li.has-sub {
+.hv-wrap #menu-main-menuen > li.has-sub {
   position: relative;
 }
 
-.hv-wrap ul > li.has-sub ul {
+.hv-wrap #menu-main-menuen > li.has-sub ul {
   display: none;
 }
 
@@ -6726,6 +6727,7 @@ footer {
   z-index: 2;
   position: relative;
   background: #98a620;
+  padding-bottom: 50px;
 }
 
 footer .container {
