@@ -440,12 +440,17 @@ header {
 	@include breakpoint(tablet2) {
 		max-width: 75px;
 		margin-top: 10px;
+		top: 0;
 	}
 
 	img {
 		max-width: 121%;
 		height: auto;
 		display: block;
+
+		@include breakpoint(tablet2) {
+			width: 100%;
+		}
 	}
 
 	p {
@@ -458,6 +463,10 @@ header {
 		font-weight: 400;
 		color: $coGreen;
 		font-style: italic;
+
+		@include breakpoint(tablet2) {
+			display: none;
+		}
 	}
 }
 
@@ -1382,11 +1391,11 @@ header {
 	@include breakpoint(tablet2) {
 		display: inline-block;
 		float: right;
-	    margin-right: 40px;
-	    width: 40px;
-	    height: 40px;
+	    margin-right: 45px;
+	    width: 60px;
+	    height: 60px;
 	    text-align: center;
-	    line-height: 40px;
+	    line-height: 60px;
 	    position: relative;
 	    top: 0px;
 	    font-size: 20px;

@@ -139,6 +139,22 @@ strong, b {
 	padding: 25px 110px 27px 20px;
 	@include border-radius(10px);
 
+	@include breakpoint(tablet2) {
+		width: 300px;
+    font-size: 21px;
+		background-position: right 18px top 14px;
+		background-size: 53px;
+		padding: 20px 80px 21px 20px;
+	}
+
+	@include breakpoint(mobile) {
+		width: 250px;
+		font-size: 18px;
+		background-position: right 18px top 14px;
+		background-size: 35px;
+		padding: 15px 60px 16px 20px;
+	}
+
 	&:hover {
 		background-color: $coGreen;
 		background-image: url('../images/mobile-os-w.png');
@@ -1652,6 +1668,10 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin
 		z-index: 999;
 		padding: 0 5px 0 0;
 		@include border-radius(0 0 7px 0);
+
+		@include breakpoint(tablet2) {
+			top: 135px;
+		}
 	}
 	.show-hide {
 		position: fixed;
@@ -1660,12 +1680,22 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin
 		left: -61px;
 		padding: 10px;
 		text-align: center;
-		background: #fff;
+		text-indent: -9999px;
 		top: 294px;
 		z-index: 999;
 		@include transform(rotate(90deg));
 		@include border-radius(7px 7px 0 0);
 		@include box-shadow(2px,-4px,4px, rgba(0,0,0,0.1));
+		background: #fff url('../images/inner/FB-FindUsonFacebook-online-144.png') no-repeat center center;
+		background-size: 108px;
+
+		@include breakpoint(tablet2) {
+			background: #fff url('../images/FB-f-Logo__blue_29.png') no-repeat center center;
+			width: 37px;
+			height: 37px;
+			left: -1px;
+			top: 135px;
+		}
 
 		img {
 			width: 100px;
