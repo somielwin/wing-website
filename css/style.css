@@ -6148,11 +6148,11 @@ header .subnav-wrapper {
   height: auto;
 }
 
-.hv-wrap #menu-main-menuen > li {
+.hv-wrap #menu-hamburger-menuen > li {
   display: block;
 }
 
-.hv-wrap #menu-main-menuen > li a {
+.hv-wrap #menu-hamburger-menuen > li a {
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
@@ -6161,11 +6161,11 @@ header .subnav-wrapper {
   display: inline-block;
 }
 
-.hv-wrap #menu-main-menuen > li.has-sub {
+.hv-wrap #menu-hamburger-menuen > li.has-sub {
   position: relative;
 }
 
-.hv-wrap #menu-main-menuen > li.has-sub ul {
+.hv-wrap #menu-hamburger-menuen > li.has-sub ul {
   display: none;
 }
 
@@ -6727,7 +6727,6 @@ footer {
   z-index: 2;
   position: relative;
   background: #98a620;
-  padding-bottom: 50px;
 }
 
 footer .container {
