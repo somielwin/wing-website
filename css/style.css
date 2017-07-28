@@ -13225,6 +13225,17 @@ a img.aligncenter {
   }
 }
 
+/* line 254, ../scss/pages/_careers.scss */
+.the-filter .col-sm-4 {
+  padding-right: 15px;
+}
+@media (max-width: 767px) {
+  /* line 254, ../scss/pages/_careers.scss */
+  .the-filter .col-sm-4 {
+    margin-bottom: 10px;
+  }
+}
+
 /* line 2, ../scss/pages/_faq.scss */
 .faq-content {
   padding: 20px 50px;

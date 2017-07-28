@@ -249,3 +249,13 @@
 		}
 	}
 }
+
+.the-filter {
+	.col-sm-4 {
+		padding-right: 15px;
+
+		@include breakpoint(tablet2) {
+			margin-bottom: 10px;
+		}
+	}
+}
