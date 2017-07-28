@@ -418,8 +418,10 @@
 }
 
 .related-content {
-	border-top: 1px solid $coLightBlue;
-	padding-top: 30px;
+	.h-new-title {
+		border-top: 1px solid $coLightBlue;
+		padding-top: 30px;
+	}
 
 	.h-news-item  h5 {
 		font-weight: 700;
