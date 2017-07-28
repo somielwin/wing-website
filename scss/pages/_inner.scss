@@ -172,11 +172,7 @@
 	}
 
 	.categ-title {
-		background: #00adef;
-			color: #fff;
 			padding: 6px 10px;
-			border-radius: 4px;
-			margin-bottom: 10px;
 			font-size: 20px;
 			text-align: center;
 
@@ -196,8 +192,8 @@
 			justify-content: flex-start;
 
 			.card-item {
-				min-width: 198px;
-				max-width: 198px;
+				min-width: 185px;
+				max-width: 185px;
 
 				@include breakpoint(tablet2) {
 					min-width: 188px;
@@ -210,20 +206,37 @@
 }
 
 .filter-hd {
-	border-bottom: 1px solid $coBlue;
 	display: flex;
-	margin-top: 20px;
+	margin: 10px 0 20px;
 
 	.title, .discount, .contact {
-		padding: 10px  0;
+		background-color: $coBlue;
+		color: $coWhite;
+		padding: 10px ;
 		text-transform: uppercase;
 		font-size: 14px;
 		font-weight: bold;
+		margin: 0 1px 0 0;
 	}
 	.title {
 		width: 64%;
 	}
 	.discount, .contact {
 		width: 18%;
+	}
+}
+
+.filter-gp {
+	border: 1px solid $coLightBlue;
+	padding: 10px;
+	margin: 20px 0;
+
+	ul {
+		padding: 0;
+		li {
+			&:last-child {
+				border: 0;
+			}
+		}
 	}
 }

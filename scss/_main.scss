@@ -578,6 +578,19 @@ ul.icons {
 	ul {
 		padding: 20px 0;
 
+	&.icons {
+		li {
+			margin-bottom: 5px;
+			padding-left: 42px;
+			position: static;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+
 		@include breakpoint(tablet2) {
 			padding: 10px 0;
 		}
