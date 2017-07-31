@@ -163,11 +163,64 @@
 		background-color: #000;
 	}
 }
+
+.wcx {
+
+	@include breakpoint(tablet2) {
+		padding:10px;
+	}
+}
 .filter-bg {
 
 	@include breakpoint(tablet2) {
 		.row {
 			margin: 0;
+		}
+	}
+
+	.wd-20 { width: 20%;
+		@include breakpoint(tablet2) {
+			width: 100%;
+		}
+	}
+	.wd-15 { width: 15%;
+		@include breakpoint(tablet2) {
+			width: 100%;
+		}
+	 }
+	.wd-10 { width: 10%;
+		@include breakpoint(tablet2) {
+			width: 100%;
+		}
+	 }
+
+
+
+  ul.wd-ul {
+		padding-top: 0;
+		margin-bottom: 20px;
+		li {
+			padding: 10px 0;
+			margin: 0;
+			border: 0;
+			background-color: lighten($coGreen, 40%);
+
+			&:nth-child(2n) {
+				background-color: #fff;
+			}
+
+			&:hover {
+				background-color: lighten($coOrange, 33%);
+
+			}
+			min-height: auto;
+
+			.wd-20,.wd-15, .wd-10 { float: left;}
+
+			p {
+				padding: 0 10px;
+				font-size: 13px;
+			}
 		}
 	}
 
@@ -209,7 +262,11 @@
 	display: flex;
 	margin: 10px 0 20px;
 
-	.title, .discount, .contact {
+	@include breakpoint(tablet2) {
+		display: none;
+	}
+
+	.title, .discount, .contact, .wd-20, .wd-15, .wd-10 {
 		background-color: $coBlue;
 		color: $coWhite;
 		padding: 10px ;
@@ -224,6 +281,7 @@
 	.discount, .contact {
 		width: 18%;
 	}
+
 }
 
 .filter-gp {
@@ -237,6 +295,15 @@
 			&:last-child {
 				border: 0;
 			}
+		}
+	}
+
+	.filter-discount,
+	.filter-contact {
+		text-align: center;
+
+		@include breakpoint(tablet2) {
+			text-align: left;
 		}
 	}
 }
