@@ -195,6 +195,23 @@ header {
 	}
 }
 
+.login-wrap-wing {
+	position: absolute;
+	display: none;
+	width: 100%;
+	z-index: 1;
+	text-align: center;
+
+	.get-wing-app {
+		float: none;
+		margin: 10px;
+	}
+
+	@include breakpoint(tablet2) {
+		display: block;
+	}
+}
+
 .login-wrap {
 	max-width: 180px;
 	min-width: 180px;
