@@ -95,8 +95,26 @@ header {
 			@include breakpoint(tablet2) {
 				background: $coBlue;
 			}
-
 		}
+
+		.header-hamburger span {
+			background-color: $coWhite;
+		}
+
+		.header-hamburger span:nth-child(2) {
+		  	@include transform(rotate(0deg) scale(0))
+		}
+
+		.header-hamburger span:first-child {
+		  	@include transform(rotate(43deg) scale(1));
+		}
+
+		.header-hamburger span:last-child {
+		 	@include transform(rotate(-43deg) scale(1));
+		}
+
+
+
 	}
 
 	&.is-animated {
@@ -416,7 +434,7 @@ header {
 	padding-top: 33px;
 
 	@include breakpoint(tablet2) {
-		padding-top: 0px;
+		padding-top: 10px;
 	}
 
 	.container {
@@ -439,8 +457,7 @@ header {
 
 	@include breakpoint(tablet2) {
 		max-width: 75px;
-		margin-top: 10px;
-		top: 0;
+		margin-top: 20px;
 	}
 
 	img {
@@ -751,7 +768,7 @@ header {
 	right: -100%;
 	height: 100%;
 	width: 100%;
-	z-index: 2003;
+	z-index: 1003;
 	@include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
 
 	@include breakpoint(tablet) {
@@ -787,7 +804,7 @@ header {
 		}
 	}
 
-	/*&:before {
+	&:before {
 		content: '';
 	    width: 300%;
 	    height: 100%;
@@ -799,7 +816,7 @@ header {
 	    background: rgba($coBlack, 0.7);
 	    @include transition(opacity 0.4s 0.4s ease);
 	}
-*/
+
 	.hv-wrap {
 		max-width: 320px;
 	    background: $coGreen;
@@ -864,7 +881,7 @@ header {
 
 .hv-wrap {
 
-	#menu-hamburger-menuen {
+	ul {
 
 
 		> li {
@@ -1001,7 +1018,7 @@ header {
 		}
 	}
 
-	ul#menu-main-menuen {
+	ul {
 
 		> li {
 			display: block;
@@ -1187,9 +1204,6 @@ header {
 		top: 0px;
 		border-left: none;
 		border-right: none;
-		width: 60px;
-		height: 60px;
-		right: -15px;
 	}
 
 	.hv-wrap & {
@@ -1215,11 +1229,6 @@ header {
 	display: block;
 	@include transform(rotate(0deg));
 	@include transition(transform 0.4s ease);
-
-	@include breakpoint(tablet2) {
-		width: 60px;
-		height: 60px;
-	}
 }
 
 .header-hamburger span:first-child, .header-hamburger span:nth-child(2), .header-hamburger span:nth-child(3) {
@@ -1244,11 +1253,6 @@ header {
 .header-hamburger span {
 	right: 10px;
 	top: 18px;
-
-	@include breakpoint(tablet2) {
-		top: 28px;
-		right: 16px;
-	}
 
 	&:first-child {
 		@include transform(translate(0px, -6px) scale(1));
@@ -1392,11 +1396,11 @@ header {
 	@include breakpoint(tablet2) {
 		display: inline-block;
 		float: right;
-	    margin-right: 45px;
-	    width: 60px;
-	    height: 60px;
+	    margin-right: 40px;
+	    width: 40px;
+	    height: 40px;
 	    text-align: center;
-	    line-height: 60px;
+	    line-height: 40px;
 	    position: relative;
 	    top: 0px;
 	    font-size: 20px;

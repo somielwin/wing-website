@@ -67,7 +67,7 @@ $(document).ready(function() {
 	// Hamburger
 	$('.header-hamburger a, .hv-close').click(function(e){
 		e.preventDefault();
-		$(this).parent('.header-hamburger').toggleClass('active');
+		$('.hv-wrap .header-hamburger').toggleClass('active');
 		$('header').toggleClass('is-blue');
 		$('.hamburger-nav').toggleClass('revealed');
 
@@ -214,7 +214,7 @@ $(window).load(function() {
 		setTimeout(function() {
 			$('.pace-inactive').hide();
 			$('header').addClass('is-animated');
-			
+
 		}, 500);
 	});
 
@@ -317,8 +317,8 @@ function showPlay() {
 
 function adjustHeight() {
 	var wH = window.innerHeight ? window.innerHeight : $(window).height()
-	
-	
+
+
 	var cW = $(".video-holder").width(); //width of container or browser
 	var cH = $(".video-holder").height(); //height of container or browser
 	var vW = 16; //width of video ratio
@@ -334,7 +334,7 @@ function adjustHeight() {
 		$("video").attr('width', cW);
 		$("video").attr('height', cH);
 	} else {
-		
+
 		if ( vP > cP ) {
 			//if video ratio is more than container ratio
 			//meaning if video width is more than container width
@@ -358,9 +358,9 @@ function adjustHeight() {
 		$("video").height(vH); //set the computed height to the video/iframe element
 		$("video").attr('width', cW);
 		$("video").attr('height', cH);
-		
+
 	}
-	
+
 }
 
 

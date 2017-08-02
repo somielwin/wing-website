@@ -1683,9 +1683,14 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin
 		@include border-radius(0 0 7px 0);
 
 		@include breakpoint(tablet2) {
-			top: 135px;
+			top: 60px;
+		}
+
+		@include breakpoint(mobile) {
+			top: 125px;
 		}
 	}
+	
 	.show-hide {
 		position: fixed;
 		width: 160px;
@@ -1703,11 +1708,12 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin
 		background-size: 108px;
 
 		@include breakpoint(tablet2) {
-			background: #fff url('../images/FB-f-Logo__blue_29.png') no-repeat center center;
-			width: 37px;
-			height: 37px;
-			left: -1px;
-			top: 135px;
+
+			top: 160px;
+		}
+
+		@include breakpoint(mobile) {
+			top: 245px;
 		}
 
 		img {
