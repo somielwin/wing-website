@@ -8,6 +8,7 @@
 	@include breakpoint(tablet2) {
 		max-height: 280px;
 		height: 280px;
+		margin-top: 48px;
 	}
 
 	&.banner-small {
