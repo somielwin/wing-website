@@ -874,6 +874,10 @@ header {
 
 			@include breakpoint(tablet2) {
 				max-width: 100%;
+
+				.login-wrap-wing {
+					display: none;
+				}
 			}
 		}
 	}
@@ -981,6 +985,7 @@ header {
 					display: inline-block;
 					margin: 0px 5px;
 					float: none;
+					border-top: none !important;
 
 					a {
 						padding: 0;
