@@ -10681,7 +10681,7 @@ a img.aligncenter {
     opacity: 1;
   }
 }
-/* line 1673, ../scss/_main.scss */
+/* line 1674, ../scss/_main.scss */
 .fb-page-like .fb-frame {
   position: fixed;
   width: 255px;
@@ -10698,18 +10698,18 @@ a img.aligncenter {
   border-radius: 0 0 7px 0;
 }
 @media (max-width: 767px) {
-  /* line 1673, ../scss/_main.scss */
+  /* line 1674, ../scss/_main.scss */
   .fb-page-like .fb-frame {
     top: 60px;
   }
 }
 @media (max-width: 480px) {
-  /* line 1673, ../scss/_main.scss */
+  /* line 1674, ../scss/_main.scss */
   .fb-page-like .fb-frame {
     top: 125px;
   }
 }
-/* line 1694, ../scss/_main.scss */
+/* line 1695, ../scss/_main.scss */
 .fb-page-like .show-hide {
   position: fixed;
   width: 160px;
@@ -10736,18 +10736,18 @@ a img.aligncenter {
   background-size: 108px;
 }
 @media (max-width: 767px) {
-  /* line 1694, ../scss/_main.scss */
+  /* line 1695, ../scss/_main.scss */
   .fb-page-like .show-hide {
     top: 160px;
   }
 }
 @media (max-width: 480px) {
-  /* line 1694, ../scss/_main.scss */
+  /* line 1695, ../scss/_main.scss */
   .fb-page-like .show-hide {
     top: 245px;
   }
 }
-/* line 1719, ../scss/_main.scss */
+/* line 1720, ../scss/_main.scss */
 .fb-page-like .show-hide img {
   width: 100px;
 }
