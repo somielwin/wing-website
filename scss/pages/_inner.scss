@@ -1,13 +1,18 @@
 .box-cc {
-	padding: 30px 30px 15px;
+	padding: 20px 25px 15px;
 	border: 1px solid $coLightBlue;
 	max-width: 405px;
 	border-radius: 4px;
 	box-shadow: 0px 0px 10px rgba($coBlack, 0.1);
+	margin-bottom: 25px;
+
+	.text-center {
+		text-align: left;
+	}
 
 	@include breakpoint(tablet) {
 		padding: 30px 15px 15px;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 	}
 
 	p {
@@ -134,11 +139,21 @@
 
 .box-video {
 	position: relative;
+	padding-bottom: 50%;
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
 	.play {
 		background-color: rgba(0, 0, 0, 0.6);
-    padding: 16px 28px;
-    float: left;
-    position: absolute;
+		padding: 16px 28px;
+		float: left;
+		position: absolute;
 		top: 43%;
 		left: 42%;
 		z-index: 1000;
@@ -146,10 +161,10 @@
 
 		span {
 			width: 0px;
-	    height: 0px;
-	    border-top: 9px solid transparent;
-	    border-bottom: 9px solid transparent;
-	    border-left: 17px solid white;
+			height: 0px;
+			border-top: 9px solid transparent;
+			border-bottom: 9px solid transparent;
+			border-left: 17px solid white;
 			float: left;
 			text-indent: -9999px;
 		}
@@ -159,6 +174,7 @@
 			cursor: pointer;
 		}
 	}
+
 	video {
 		background-color: #000;
 	}
@@ -199,6 +215,7 @@
   ul.wd-ul {
 		padding-top: 0;
 		margin-bottom: 20px;
+
 		li {
 			padding: 10px 0;
 			margin: 0;
@@ -220,14 +237,41 @@
 			p {
 				padding: 0 10px;
 				font-size: 13px;
+
+				@include breakpoint(tablet2) {
+					padding-bottom: 3px;
+				}
+
+				span {
+					font-weight: 500;
+					display: none;
+					color: #999;
+					min-width: 80px;
+					margin-right: 5px;
+
+					@include breakpoint(tablet2) {
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		.wd-20 {
+
+			p {
+				font-weight: 500;
 			}
 		}
 	}
 
 	.categ-title {
-			padding: 6px 10px;
 			font-size: 20px;
-			text-align: center;
+			text-align: left;
+			padding: 6px 0px;
+
+			strong {
+				font-weight: 500;
+			}
 
 			@include breakpoint(tablet) {
 				font-size: 18px;
@@ -300,10 +344,28 @@
 
 	.filter-discount,
 	.filter-contact {
-		text-align: center;
+		text-align: left;
+		padding-left: 10px;
+
+		p {
+			font-size: 14px;
+		}
 
 		@include breakpoint(tablet2) {
 			text-align: left;
+			padding-left: 0;
 		}
+	}
+}
+
+.related-content {
+	padding-bottom: 20px;
+
+	@include breakpoint(tablet2) {
+		padding-bottom: 30px;
+	}
+
+	.h-news-item {
+		padding: 20px 0 30px;
 	}
 }

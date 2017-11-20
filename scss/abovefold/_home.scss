@@ -65,7 +65,7 @@
 
 	&:before {
 		content:'';
-		height: 45px;
+		xheight: 45px;
 		position: absolute;
 		bottom: 0;
 		background: $coWhite;
@@ -235,6 +235,13 @@
     left: 50%;
     @include transform(translate(-50%, 0));
 
+    @include breakpoint(desktop) {
+    	@include transform(translate(-50%, 0));
+    	bottom: 0;
+    	max-width: 100%;
+    	height: auto;
+    }
+
     @include breakpoint(tablet2) {
     	@include transform(translate(0%, 0));
     	left: 0;
@@ -294,7 +301,7 @@
 
 						&:after {
 							width: 100%;
-							@include transition(width 5s ease-in);
+							
 							background: $coBlue;
 						}
 					}

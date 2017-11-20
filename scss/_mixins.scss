@@ -304,6 +304,10 @@
   @else if $point == mobile {
     @media (max-width: 480px)  { @content; }
   }
+
+  @else if $point == mobilesmall {
+    @media (max-width: 375px)  { @content; }
+  }
 }
 // example use
 // @include breakpoint(tablet) {

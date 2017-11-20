@@ -4,6 +4,14 @@ footer {
 	position: relative;
 	background: $coDarkGreen;
 
+	&.add-space {
+		@include breakpoint(tablet) {
+			padding-bottom: 40px;
+		}
+	}
+
+	
+
 	.container {
 		position: relative;
 
@@ -23,7 +31,10 @@ footer {
 	padding: 15px 0;
 	font-size: 14px;
 	color: #fff;
-	height: 50px;
+
+	@include breakpoint(tablet2) {
+		padding: 10px 0;
+	}
 }
 
 .get-wingapp {
@@ -80,6 +91,7 @@ footer {
 	@include breakpoint(tablet) {
 		padding-top: 30px;
 		padding-right: 0;
+		padding-left: 23px;
 	}
 
 	@include breakpoint(phablet) {
@@ -95,7 +107,7 @@ footer {
 		font-size: 55px;
 		font-weight: 300;
 		font-family: $fontA;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 		line-height: 55px;
 
 		@include breakpoint(tablet) {
@@ -113,9 +125,18 @@ footer {
 		}*/
 	}
 
+	> h2 {
+		display: none;
+
+		.touch & {
+			display: block !important;
+		}
+	}
+
 	p {
 		font-size: 16px;
 		color: $coWhite;
+		max-width: 405px;
 	}
 
 	@include breakpoint(tablet2) {
@@ -124,6 +145,13 @@ footer {
 }
 
 .dl-app-wrap {
+
+	display: block;
+
+	.touch & {
+
+		display: none !important;
+	}
 
 	ul  {
 		margin: 30px 0px 50px;

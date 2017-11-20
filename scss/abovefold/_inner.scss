@@ -2,17 +2,18 @@
 	max-height: 430px;
 	position: relative;
 	overflow: hidden;
-	height: 430px;
+	padding-bottom: 25%;
+	height: 0;
 	background: $coDarkGreen;
 
 	@include breakpoint(tablet2) {
-		max-height: 280px;
-		height: 280px;
-		margin-top: 48px;
+		max-height: 260px;
+		height: 260px;
+		padding-bottom: 0;
 	}
 
 	&.banner-small {
-		max-height: 280px;
+		max-height: 260px;
 		min-height: 230px;
 
 		.inner-banner-text.text-left {
@@ -27,15 +28,49 @@
 			min-height: 230px;
 			max-height: 230px;
 		}
+
+		.coverimage {
+
+			@include breakpoint(tablet2) {
+				position: relative;
+				min-height: 230px;
+			}
+		}
 	}
 
 	.coverimage {
-		max-height: 430px;
-		min-height: 430px;
+		max-height: 100%;
+		height: 100%;
+		position: absolute;
 
 		@include breakpoint(tablet2) {
-			display: none;
+			position: relative;
+			min-height: 260px;
 		}
+
+		.coverimage-desk {
+			display: block;
+			width: 100%;
+			height: auto;
+
+			@include breakpoint(tablet2) {
+				display: none;
+			}
+		}
+
+		.coverimage-mobile {
+			display: none;
+			opacity: 0;
+			visibility: hidden;
+
+			@include breakpoint(tablet2) {
+				display: block;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		
 	}
 
 	.table-wrap {
@@ -57,23 +92,51 @@
 			z-index: 10;
 		}
 	}
+
+	.coverimage-mob {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: none;
+		visibility: hidden;
+
+		@include breakpoint(tablet2) {
+			display: block;
+			visibility: visible;
+		}
+
+	}
+}
+
+@media (max-width: 400px) {
+
+	.coverimage-mob {	
+		width: auto;
+		height: 100%;
+		position: absolute;
+	}
 }
 
 .inner-banner-text {
 
 	h1 {
 		font-family: $fontA;
-		font-size: 55px;
+		font-size: 45px;
 		color: $coWhite;
+		line-height: 55px;
 		margin-bottom: 15px;
 
 		@include breakpoint(tablet) {
-			font-size: 45px;
+			font-size: 36px;
+			line-height: 42px;
+			margin-bottom: 10px;
 		}
 
 		@include breakpoint(tablet2) {
-			font-size: 35px;
-			line-height: 40px;
+			font-size: 32px;
+			line-height: 38px;
 		}
 
 		@include breakpoint(mobile) {
@@ -85,10 +148,15 @@
 	p {
 		font-size: 18px;
 		color: $coWhite;
-		font-weight: 300;
+		font-weight: 400;
+
+		@include breakpoint(tablet2) {
+			font-size: 16px;
+			max-width: 60%;
+		}
 
 		@include breakpoint(mobile) {
-			font-size: 14px;
+			font-size: 16px;
 		}
 	}
 
@@ -98,6 +166,11 @@
 		padding-top: 6px;
 		background: $coDarkGreen;
 		padding: 10px 20px;
+
+		@include breakpoint(tablet2) {
+			font-size: 14px;
+			padding: 8px 10px;
+		}
 	}
 
 	&.text-left {
@@ -214,7 +287,7 @@
 		}
 
 		&.scroll-up {
-			top: 125px;
+			top: 124px;
 
 			@include breakpoint(tablet) {
 				top: 0;
@@ -270,9 +343,17 @@
 	min-width: 175px;
 
 	@include breakpoint(tablet2)  {
-		max-width: 175px;
+		max-width: 205px;
+
+		&.w-full {
+			max-width: 100%;
+		}
 	}
 
+	@include breakpoint(mobilesmall)  {
+		max-width: 175px;
+
+	}
 
 	.mobile-custom-dropdown {
 		padding-right: 20px;
@@ -401,13 +482,19 @@
 
 .card-list {
 
+	padding-bottom: 10px;
+	border-bottom: 1px solid #82d9ff;
 	margin-bottom: 20px;
 
+	&:last-child {
+		border-bottom: none;
+	}
+
 	.flex {
-		margin: 0px -8px;
+		margin: 0px -1%;
 		width: auto;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: left;
 		display: flex;
 
 		@include breakpoint(tablet2) {
@@ -420,11 +507,16 @@
 	}
 
 	.card-item-img {
-		padding-bottom: 25%;
-		width: 100%;
+		padding-bottom: 16%;
+		width: 30%;
 		height: auto;
 		position: relative;
-		margin-bottom: 10px;
+		display: inline-block;
+		vertical-align: middle;
+
+		@include breakpoint(phablet) {
+			width: 22%;
+		}
 
 		img {
 			padding: 0px 10px;
@@ -442,30 +534,23 @@
 
 	.card-item {
 		text-align: center;
-		max-width: 280px;
 		border: 1px solid #82d9ff;
-		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-		padding: 15px 0px;
+		padding: 8px 0px;
 		border-radius: 4px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		min-width: 186px;
-		max-width: 186px;
-		margin: 0px 8px;
+		margin: 0px 1%;
+		width: 48%;
 		margin-bottom: 15px;
 
 		@include breakpoint(phablet) {
-			min-width: 180px;
-			max-width: 180px;
 			margin: 0px 4px 10px;
-			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+			width: 100%
 		}
 
 		@include breakpoint(mobile) {
-			min-width: 140px;
-			max-width: 140px;
-
+			width: 100%;
 		}
 	}
 
@@ -473,9 +558,23 @@
 		padding: 0px 8px;
 		width: 100%;
 		display: block;
+		text-align: left;
+		position: relative;
 
 		p {
 			color: $defaultColor;
+			display: inline-block;
+			vertical-align: middle;
+			width: 45%;
+			padding: 0px 10px;
+			text-align: center;
+			font-size: 14px;
+			font-weight: 400;
+
+			a {
+				display: block;
+
+			}
 
 			span {
 				color: $coOrange;
@@ -484,22 +583,112 @@
 					font-size: 12px;
 				}
 			}
+
+			@include breakpoint(phablet) {
+				font-size: 12px;
+			}
 		}
 
 		a {
-			word-break: break-all;
 			font-size: 14px;
 		}
 	}
 
+	.card-item-btn {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		width: 90px;
+		@include transform(translate(0, -50%));
+
+		@include breakpoint(tablet2) {
+			width: 65px;
+			right: 8px;
+		}
+
+
+		p {
+			width: 100%;
+			text-align: center;
+			padding: 0;
+
+			
+
+			a {
+				display: block;
+				margin-top: 0;
+				padding: 6px 8px;
+				border: 1px solid $coGreen;
+				background: $coGreen;
+
+				@include breakpoint(tablet2) {
+					font-size: 10px;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.card-item-discount {
+		text-align: center;
+	    width: 90px;
+	    position: absolute;
+	    top: 50%;
+	    right: 10px;
+	    @include transform(translate(0, -50%));
+
+	    &:before {
+	    	content:'';
+	    	display: block;
+	    	float: none;
+	    	width: 1px;
+	    	height: 55px;
+	    	top: 0;
+	    	position: absolute;
+	    	background: #ccc;
+	    	left: 0;
+	    	margin-top: -6px;
+
+	    }
+
+	    @include breakpoint(phablet) {
+			right: 5px;
+		}
+
+		p {
+			font-weight: 700;
+			color: $coBlue;
+			font-size: 16px;
+			width: 100%;
+			padding: 0;
+
+			@include breakpoint(phablet) {
+				font-size: 14px;
+			}
+		}
+
+		span {
+			font-weight: 700;
+			color: $coBlue;
+			display: block;
+			font-size: 14px;
+
+			@include breakpoint(phablet) {
+				font-size: 12px;
+			}
+
+		}
+	}
+
 	.card-categ-title {
-		background: #00adef;
-	    color: #fff;
-	    padding: 6px 10px;
+	    color: #00adef;
+	    padding: 6px 0px;
 	    border-radius: 4px;
 	    margin-bottom: 10px;
 	    font-size: 20px;
-	    text-align: center;
+	    text-align: left;
+	    font-weight: 400;
+
 
 	    @include breakpoint(tablet) {
 	    	font-size: 18px;
@@ -507,7 +696,7 @@
 
 	    @include breakpoint(mobile) {
 	    	font-size: 16px;
-	    	padding: 5px 10px;
+	    	padding: 5px 0px;
 	    }
 	}
 }

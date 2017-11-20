@@ -172,6 +172,15 @@
 
 	.right-img-wrap {
 		right: -75px;
+		max-width: 600px;
+
+		img {
+			float: none;
+			border: none;
+			box-shadow: none;
+			border-radius: 0;
+			max-width: 100%;
+		}
 
 		@include breakpoint(tablet) {
 			right: 0;
@@ -180,7 +189,7 @@
 }
 
 .h-news-item {
-	padding: 30px 5px;
+	padding: 20px 5px 30px;
 
 	@include breakpoint(tablet) {
 		padding: 20px 0;
@@ -210,13 +219,20 @@
 			font-size: 14px;
 		}
 	}
+
+	.img-wrap {
+
+		img {
+			bottom: auto;
+		}
+	}
 }
 
 .img-wrap {
 	width: 100%;
 	height: 0;
     position: relative;
-    padding-bottom: 40%;
+    padding-bottom: 66%;
     overflow: hidden;
     margin-bottom: 15px;
     display: flex;
@@ -296,6 +312,37 @@
 
 			.right-img-detail {
 				text-align: center;
+			}
+		}
+	}
+
+	.layout-1 {
+
+		ul {
+			padding-top: 0;
+			padding-bottom: 15px;
+
+			&:after {
+				content:'';
+				display: block;
+				float: none;
+				clear: both;
+			}
+
+			li {
+				width: 35%;
+				float: left;
+
+				@include breakpoint(tablet) {
+					width: 50%;
+				}
+
+				@include breakpoint(tablet2) {
+					width: auto;
+					margin: 0 11px 10px;
+					float: none;
+					display: inline-block;
+				}
 			}
 		}
 	}

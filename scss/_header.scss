@@ -91,14 +91,14 @@ header {
 
 	&.is-blue {
 
-		.header-wrap {
+		/*.header-wrap {
 			@include breakpoint(tablet2) {
 				background: $coBlue;
 			}
-		}
+		}*/
 
 		.header-hamburger span {
-			background-color: $coWhite;
+			background-color: $coBlue;
 		}
 
 		.header-hamburger span:nth-child(2) {
@@ -112,9 +112,6 @@ header {
 		.header-hamburger span:last-child {
 		 	@include transform(rotate(-43deg) scale(1));
 		}
-
-
-
 	}
 
 	&.is-animated {
@@ -200,15 +197,22 @@ header {
 	position: absolute;
 	display: none;
 	width: 100%;
-	z-index: 1;
+	z-index: 888;
 	text-align: center;
+	opacity: 0;
+
+	&.is-animated {
+		opacity: 1;
+	}
 
 	.get-wing-app {
 		float: none;
 		margin: 10px;
+		border: 1px solid $coOrange;
+		font-weight: 500;
 	}
 
-	@include breakpoint(tablet2) {
+	@include breakpoint(tablet) {
 		display: block;
 	}
 }
@@ -301,11 +305,11 @@ header {
 		margin-top: 15px;
 		padding-right: 55px;
 		margin-bottom: 25px;
-
+		display: none;
 	}
 
 	@include breakpoint(tablet2) {
-		display: none;
+		
 		margin-bottom: 0;
 		margin-top: 0;
 	}
@@ -337,6 +341,10 @@ header {
 
 	.mobile-custom-dropdown > .selected {
 		font-weight: 500;
+
+		@include breakpoint(tablet2) {
+			font-weight: 300;
+		}
 	}
 }
 
@@ -368,7 +376,7 @@ header {
 				display: inline-block;
 				text-align: right;
 				padding-bottom: 14px;
-				margin: 0px 2px;
+				margin: 0px 1px;
 				position: relative;
 
 				&.mobile-menu-link {
@@ -439,11 +447,11 @@ header {
 	}
 
 	&.small-container {
-		max-width: 940px;
+		max-width: 1024px;
 	}
 
 	&.xs-container {
-		max-width: 660px;
+		max-width: 1024px;
 	}
 }
 
@@ -456,10 +464,35 @@ header {
 	}
 
 	.container {
-		padding-left: 160px;
+		padding-left: 200px;
 	}
 
 
+}
+
+.um-language {
+
+	display: none;
+
+	@include breakpoint(tablet) {
+		padding-right: 100px;
+	    position: absolute;
+	    right: 0;
+	    top: -5px;
+	    display: block;
+	}
+
+	@include breakpoint(tablet2) {
+		top: 6px;
+		padding-right: 50px;
+	}
+
+	.switch-language {
+
+		@include breakpoint(tablet2) {
+			display: block;
+		}
+	}
 }
 
 .logo {
@@ -470,22 +503,31 @@ header {
 	max-width: 140px;
 
 	@include breakpoint(tablet) {
-		max-width: 100px;
+		max-width: 245px;
 	}
+	
 
 	@include breakpoint(tablet2) {
 		max-width: 75px;
 		margin-top: 20px;
-	}
+		position: absolute;	}
 
 	img {
-		max-width: 121%;
+		max-width: 175px;
 		height: auto;
 		display: block;
 
-		@include breakpoint(tablet2) {
-			width: 100%;
+		@include breakpoint(tablet) {
+			max-width: 100px;
 		}
+
+		@include breakpoint(tablet2) {
+			max-width: 75px;
+		}
+	}
+
+	a {
+		display: inline-block;
 	}
 
 	p {
@@ -499,6 +541,17 @@ header {
 		color: $coGreen;
 		font-style: italic;
 
+		@include breakpoint(tablet) {
+			position: relative;
+			top: 0;
+			width: auto;
+			display: inline-block;
+			margin-top: 15px;
+    		margin-left: 10px;
+    		max-width: 128px;
+    		vertical-align: top;
+		}
+
 		@include breakpoint(tablet2) {
 			display: none;
 		}
@@ -508,7 +561,11 @@ header {
 .social-wrap {
 
 	@include breakpoint(tablet2) {
-		display: none;
+		
+
+		.hv-wrap-mobile & {
+			display: none;
+		}
 	}
 
 	> ul {
@@ -536,12 +593,85 @@ header {
 				color: $coWhite;
 				padding: 0;
 
+				&:hover {
+					background: darken($coGreen, 8%);
+				}
+
 				.fa {
 					font-size: 13px;
 					position: relative;
 					top: -1px;
 				}
 
+			}
+		}
+	}
+}
+
+.login-reg-wrap {
+	margin-left: 10px;
+	margin-top: 2px;
+
+	.hv-wrap-mobile & {
+		margin-left: -10px;
+		float: none;
+		clear: both;
+	}
+
+	ul {
+
+		.hv-wrap-mobile & {
+			text-align: left;
+		}
+
+		> li {
+			display: inline-block;
+			position: relative;
+			padding: 0px 5px;
+
+
+
+			.hv-wrap-mobile & {
+				display: inline-block;
+				border: none;
+				text-align: center;
+				padding: 0px 10px;
+			}
+
+			&:first-child {
+
+				&:after {
+					content:'';
+					display: block;
+					position: absolute;
+					height: 100%;
+					border-left: 1px solid #00adef;
+					top: 0;
+					right: -2px;
+
+					.hv-wrap-mobile & {
+						right: -3px;
+						border-left: 1px solid #ccc;
+					}
+
+				}
+			}
+
+			a {
+				font-size: 13px;
+				font-weight: 300;
+				color: #00adef;
+
+				&:hover {
+					color: darken($coBlue, 8%);
+				}
+
+				.hv-wrap-mobile & {
+					font-size: 13px;
+					color: #fff;
+					padding: 0;
+
+				}
 			}
 		}
 	}
@@ -613,11 +743,12 @@ header {
 	}
 	.first-layer {
 		background: $coDarkBlue;
-		padding: 24px 0;
+		padding: 0px 0;
+		display: none !important;
 	}
 
 	.second-layer {
-		background: $coBlue;
+		background: $coDarkBlue;
 	}
 
 	.nav-box-card {
@@ -675,7 +806,7 @@ header {
 	}
 
 	.fl-title {
-		font-weight: 300;
+		font-weight: 500;
 		font-family: $defaultFont;
 		margin-bottom: 15px;
 		text-transform: uppercase;
@@ -691,7 +822,7 @@ header {
 
 
 		.fm-title {
-			font-weight: 300;
+			font-weight: 500;
 			margin-right: 30px;
 		}
 
@@ -701,7 +832,7 @@ header {
 			li {
 
 				a {
-					font-weight: 500;
+					font-weight: 300;
 					letter-spacing: 0.5px;
 					text-transform: uppercase;
 
@@ -879,6 +1010,10 @@ header {
 					display: none;
 				}
 			}
+		}
+
+		.login-wrap-wing {
+			display: none;
 		}
 	}
 
@@ -1128,6 +1263,21 @@ header {
 			}
 		}
 	}
+
+
+	.social-wrap {
+
+		ul {
+
+			li {
+				border-top: none;
+
+				a {
+					padding: 0;
+				}
+			}
+		}
+	}
 }
 
 
@@ -1213,14 +1363,15 @@ header {
 	background: transparent;
 
 	&.active {
-		@include breakpoint(tablet2) {
+		/*@include breakpoint(tablet2) {
 			background: $coBlue;
-		}
+		}*/
 	}
 
 	@include breakpoint(tablet) {
 		right: 0px;
-		top: -58px;
+		top: -10px;
+		border: none;
 	}
 
 	@include breakpoint(tablet2) {
@@ -1240,7 +1391,7 @@ header {
 
 	}
 
-	@include breakpoint(tablet2) {
+	@include breakpoint(tablet) {
 		display: block;
 
 	}
@@ -1292,16 +1443,16 @@ header {
 
 .header-hamburger.active {
 
-	@include breakpoint(tablet2) {
+	/*@include breakpoint(tablet2) {
 		background: #46aaf2;
-	}
+	}*/
 
 	a {
 		@include transform(rotate(90deg));
 
 		span {
 			@include breakpoint(tablet2) {
-				background: $coWhite;
+				background: $coBlue;
 			}
 
 		}
@@ -1338,9 +1489,13 @@ header {
 .sl-wrap {
 	border: 1px solid $coGreen;
 	border-radius: 6px;
-	max-width: 105px;
-	min-width: 105px;
+	max-width: 85px;
+	min-width: 85px;
 	display: inline-block;
+
+	@include breakpoint(tablet) {
+		border: 1px solid transparent;
+	}
 }
 
 .mobile-custom-dropdown {
@@ -1383,6 +1538,10 @@ header {
 				padding: 3px 15px;
 				font-size: 13px;
 				display: block;
+
+				@include breakpoint(tablet2) {
+					padding: 3px 10px;
+				}
 			}
 		}
 	}
@@ -1393,6 +1552,10 @@ header {
 	    line-height: 25px;
 	    font-size: 13px;
 	    color: $coGreen;
+
+	    @include breakpoint(tablet2) {
+	    	padding: 0px 10px;
+	    }
 	}
 }
 

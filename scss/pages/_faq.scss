@@ -22,7 +22,7 @@
 		padding: 6px 0;
 	}
 
-	ul.bullets, ul.cross {
+	ul.bullets, ul.cross, ul {
 		padding: 0px 0 10px;
 
 		@include breakpoint(tablet2) {
