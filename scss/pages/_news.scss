@@ -367,10 +367,10 @@
 				}
 
 				.fa {
-					position: relative;
+					position: relative;	
 					top: -1px;
 					font-size: 20px;
-					line-height: 27px;
+					line-height: 29px;
 				}
 			}
 		}
@@ -381,7 +381,8 @@
 	margin-top: 35px;
 
 	@include breakpoint(tablet) {
-		padding-top: 48px;
+		xpadding-top: 48px;
+		margin-top: 25px;
 	}
 }
 
@@ -408,8 +409,9 @@
 	h2, h3, h4, h5, h6 {
 		margin: 20px 0 10px;
 		font-family: $defaultFont;
-		font-weight: 500;
+		font-weight: 400;
 		line-height: 1.2;
+		color: #00adef;
 	}
 
 	h2 {
@@ -450,6 +452,10 @@
 		@include breakpoint(tablet2) {
 			font-size: 14px;
 		}
+	}
+
+	b, strong {
+		font-weight: 400;
 	}
 
 	a {
@@ -706,6 +712,12 @@
 
 .training-module-wrap {
 
+	.news-single-content h1.post-title-mobile {
+		display: block;
+		font-size: 32px;
+		line-height: 42px;
+	}
+
 	.news-single {
 		padding-top: 0;
 		margin-top: 15px;
@@ -720,6 +732,20 @@
 		ul, ol {
 			padding-bottom: 0;
 		}
+	}
+}
+
+#training-side-menu {
+	@include breakpoint(tablet2) {
+		display: none;
+	}
+}
+
+.training-side-menu2 {
+	display: none;
+
+	@include breakpoint(tablet2) {
+		display: block;
 	}
 }
 
@@ -788,5 +814,6 @@
 		left: 0 !important;
 		width: 100% !important;
 		background: #fff;
+		transform: translate3d(0px, 0px, 0px) !important;
 	}
 }

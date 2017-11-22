@@ -904,6 +904,10 @@ ul.cross {
 			padding-left: 0;
 			background: #fff;
 
+			.bg-grey & {
+				background: transparent;
+			}
+
 			&:before {
 				content:'';
 				display: none;
@@ -1027,7 +1031,7 @@ ul.cross {
 		    -webkit-box-orient: vertical;
 		    -webkit-box-direction: normal;
 		    flex-direction: row;
-		    flex-wrap: nowrap;
+		    flex-wrap: wrap;
 
 		    @include breakpoint(tablet2) {
 		    	flex-wrap: wrap;
@@ -1045,12 +1049,16 @@ ul.cross {
 			}
 
 			> li {
-				width: 25%;
+				width: calc(25% - 20px);
 				display: flex;
 			    flex-direction: column;
 			    -webkit-box-orient: vertical;
 			    -webkit-box-direction: normal;
-			    margin: 0px 10px;
+			    margin: 0px 10px 20px;
+
+			    #section-1 & {
+			    	background: #fff;
+			    }
 
 			    @include breakpoint(tablet) {
 			    	width: 33.33%;
@@ -1193,7 +1201,6 @@ ul.cross {
 	p {
 		font-size: 14px;
 		padding: 0px 15px;
-		text-align: left;
 	}
 
 	img {
@@ -1261,9 +1268,16 @@ ul.cross {
 	clear: both;
 	font-size: 25px;
 	color: $coBlue;
-	margin-bottom: 15px;
 	font-family: $fontA;
-	display: none;
+	
+
+	/*#section-1 & {
+		width: auto;
+		height: auto;
+		background: transparent;
+		color: #00adef;
+		margin-bottom: 5px;
+	}*/
 
 	@include breakpoint(tablet2) {
 		display: none;
@@ -2041,6 +2055,188 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin
 	.btn {
 		margin-top: 0;
 	}
+}
+
+.breadcrumbs-wrap {
+	border-bottom: 1px solid #e6e6e6;
+	padding: 8px 0;
+
+	
+	
+
+	@include breakpoint(tablet) {
+		padding-top: 53px;
+
+		&.no-pad {
+			padding-top: 0;
+		}
+	}
+
+	@inlude breakpoint(tablet2) {
+		margin-bottom: 0;
+	}
+}
+
+
+.breadcrumb {
+	
+
+	@include breakpoint(tablet2) {
+		margin-bottom: 10px;
+	}
+
+	ul {
+		padding-left: 0 !important;
+	}
+
+	li {
+		display: inline-block;
+		padding-right: 15px;
+		position: relative;
+		margin-right: 5px;
+
+		&:last-child {
+			padding-right: 0;
+			margin-right: 0;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		a {
+			font-weight: 400;
+			color: $defaultColor;
+			font-size: 14px;
+
+
+		}
+
+		span {
+			font-weight: 300;
+			font-size: 12px;
+		}
+
+		&:before {
+			content: "\f105";
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			position: absolute;
+			top: 2px;
+			right: 0;
+		}
+	}
+}
+
+/*** Fancybox ***/
+
+.fancybox-opened .fancybox-skin {
+    -webkit-box-shadow: 0 0 0;
+       -moz-box-shadow: 0 0 0;
+            box-shadow: 0 0 0;
+}
+
+.fancybox-overlay, .fancybox-skin {
+	background: $coWhite;
+
+}
+
+.fancybox-item.fancybox-close {
+	background: none;
+	top: 10px;
+	right: 15px;
+
+	&:before {
+		content:'';
+		display: block;
+		width: 3px;
+		height: 15px;
+		border-radius: 3px;
+		position: absolute;
+		top: 5px;
+		left: 8px;
+		background: $coRed;
+		border: none;
+		@include transform(rotate(45deg));
+	}
+
+	&:after {
+		content:'';
+		display: block;
+		width: 3px;
+		height: 15px;
+		border-radius: 3px;
+		background: $coRed;
+		border: none;
+		@include transform(rotate(-45deg));
+		position: absolute;
+		top: 5px;
+		left: 8px;
+	}
+}
+
+.fc-popup-content {
+	padding: 60px 0 15px 0;
+
+	@include breakpoint(tablet2) {
+		padding: 20px 0 0 10px 0;
+	}
+
+	.col-list-item p {
+		padding: 0;
+	}
+
+	.col-num {
+		display: block;
+		background: #00adef;
+		color: #fff;
+		margin: 0 auto 15px;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+
+		@include breakpoint(tablet2) {
+			display: block;
+		}
+	}
+
+	.col-list-item {
+		max-width: 240px;
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+
+.fc-header {
+	padding-bottom: 40px;
+
+	h2 {
+		text-align: center;
+	}
+}
+
+.fancybox-wrap {
+	width: 100% !important;
+	top: 0 !important;
+	left: 0 !important;
+}
+
+.fancybox-inner {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.step-frame-wrapper {
+	width: 100%;
+	padding-bottom: 176%;
+	height: 0;
+	background: url(../images/step-frame.png) no-repeat bottom center;
+	background-size: cover;
+	margin-bottom: 15px;
 }
 
 .logo-c-listings {
