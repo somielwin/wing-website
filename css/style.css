@@ -9122,7 +9122,8 @@ body:lang(km) .sec-menu ul li > a {
     .pagination ul li {
       display: inline-block;
       text-align: center;
-      margin: 0px 1px; }
+      margin: 0px 1px;
+      vertical-align: middle; }
       .pagination ul li a {
         border: 1px solid #82d9ff;
         width: 30px;
@@ -9142,7 +9143,8 @@ body:lang(km) .sec-menu ul li > a {
         .pagination ul li a .fa {
           position: relative;
           top: -1px;
-          font-size: 20px; }
+          font-size: 20px;
+          line-height: 27px; }
 
 .news-single {
   margin-top: 35px; }
