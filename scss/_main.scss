@@ -90,6 +90,7 @@ strong, b {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	letter-spacing: 0.5px;
 
 	&:hover {
 		background: $coDarkBlue;
@@ -658,7 +659,16 @@ ul.bullets, ul.cross {
 	}
 }
 
+ul.no-style {
+
+	li {
+		list-style: none;
+		padding-left: 0; 
+	}
+}
+
 ul.icons {
+
 	li {
 		img {
 			float: left;
@@ -903,6 +913,7 @@ ul.cross {
 			padding-bottom: 15px;
 			padding-left: 0;
 			background: #fff;
+			vertical-align: top;
 
 			.bg-grey & {
 				background: transparent;
@@ -1032,6 +1043,7 @@ ul.cross {
 		    -webkit-box-direction: normal;
 		    flex-direction: row;
 		    flex-wrap: wrap;
+		    width: 100%;
 
 		    @include breakpoint(tablet2) {
 		    	flex-wrap: wrap;
@@ -1080,6 +1092,14 @@ ul.cross {
 					float: none;
 					clear: both;
 
+					.fc-popup-content & {
+						width: 50%;
+						clear: none;
+						margin-left: 0;
+						margin-right: 0;
+
+					}
+
 					&:nth-child(2n + 1) {
 						clear: left;
 					}
@@ -1126,6 +1146,11 @@ ul.cross {
 					width: 100%;
 					float: none;
 					clear: both;
+
+					.fc-popup-content & {
+						width: 50%;
+						clear: none;
+					}
 
 				}
 
@@ -2134,31 +2159,65 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin
 
 /*** Fancybox ***/
 
+a.fancybox {
+	padding-right: 30px;
+	position: relative;
+	display: inline-block !important;
+
+	&:after {
+		content:'';
+		width: 20px;
+		height: 20px;
+		background: url(../images/icons-expand.png) no-repeat center center;
+		position: absolute;
+		right: 0;
+		background-size: cover;
+		top: -1px;
+		z-index: 2;
+	}
+}
+
 .fancybox-opened .fancybox-skin {
     -webkit-box-shadow: 0 0 0;
        -moz-box-shadow: 0 0 0;
             box-shadow: 0 0 0;
+            background: transparent;
+
+    /*@include breakpoint(tablet2) {
+    	background: $coWhite;
+    }*/
+}
+
+#layout-6 .layout-1 .text-center a {
+
+	@include breakpoint(tablet2) {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
 }
 
 .fancybox-overlay, .fancybox-skin {
-	background: $coWhite;
 
+	@include breakpoint(tablet2) {
+    	background: $coWhite;
+    }
 }
 
 .fancybox-item.fancybox-close {
-	background: none;
-	top: 10px;
-	right: 15px;
+	background: #fff;
+    top: 10px;
+    right: 15px;
+    border-radius: 10px;
 
 	&:before {
 		content:'';
 		display: block;
 		width: 3px;
-		height: 15px;
+		height: 20px;
 		border-radius: 3px;
 		position: absolute;
-		top: 5px;
-		left: 8px;
+		top: 8px;
+		left: 17px;
 		background: $coRed;
 		border: none;
 		@include transform(rotate(45deg));
@@ -2168,19 +2227,19 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin
 		content:'';
 		display: block;
 		width: 3px;
-		height: 15px;
+		height: 20px;
 		border-radius: 3px;
 		background: $coRed;
 		border: none;
 		@include transform(rotate(-45deg));
 		position: absolute;
-		top: 5px;
-		left: 8px;
+		top: 8px;
+		left: 17px;
 	}
 }
 
 .fc-popup-content {
-	padding: 60px 0 15px 0;
+	padding: 40px 0 15px 0;
 
 	@include breakpoint(tablet2) {
 		padding: 20px 0 0 10px 0;
@@ -2198,9 +2257,15 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin
 		border-radius: 50%;
 		width: 40px;
 		height: 40px;
+		line-height: 40px;
 
 		@include breakpoint(tablet2) {
 			display: block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 18px;
+			margin-bottom: 8px;
 		}
 	}
 
@@ -2208,35 +2273,77 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin
 		max-width: 240px;
 		margin: 0 auto;
 		width: 100%;
+
+		@include breakpoint(phablet) {
+			padding: 0px 10px 15px;
+			font-size: 13px;
+
+		}
+	}
+
+	.container {
+		background: #fff;
+	    padding-top: 30px;
+	    border-radius: 20px;
+	    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+
+	    @include breakpoint(tablet2) {
+	    	border-radius: 0;
+	    	box-shadow: none;
+	    	padding-top: 5px;
+	    }
 	}
 }
 
 .fc-header {
 	padding-bottom: 40px;
 
+	@include breakpoint(tablet2) {
+		padding-bottom: 25px;
+	}
+
 	h2 {
 		text-align: center;
+
+		@include breakpoint(tablet2) {
+			margin-bottom: 15px;
+		}
 	}
 }
 
 .fancybox-wrap {
 	width: 100% !important;
-	top: 0 !important;
 	left: 0 !important;
 }
 
 .fancybox-inner {
 	width: 100% !important;
-	height: 100% !important;
+	overflow: scroll !important;
 }
 
 .step-frame-wrapper {
 	width: 100%;
-	padding-bottom: 176%;
+	padding-bottom: 177%;
 	height: 0;
 	background: url(../images/step-frame.png) no-repeat bottom center;
 	background-size: cover;
 	margin-bottom: 15px;
+	position: relative;
+	overflow: hidden;
+
+
+	.step-frame-img {
+		width: 87%;
+	    position: absolute;
+	    top: 13%;
+	    left: 6.9%;
+
+	    img {
+	    	width: 100%;
+	    	height: auto;
+	    	display: block;
+	    }
+	}
 }
 
 .logo-c-listings {
@@ -2273,12 +2380,21 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin
 	}
 }
 
+body.overflow-hidden {
+	position: relative;
+	overflow: hidden !important;
+}
+
 body:lang(km) .sec-menu-fix-wrap .btn {
 	font-size: 13px;
 }
 
 body:lang(km) .sec-menu ul li {
 	padding: 0px 10px;
+}
+
+body:lang(km) .login-wrap-wing .get-wing-app {
+	margin: 10px 5px;
 }
 
 body:lang(km) .sec-menu ul li > a {

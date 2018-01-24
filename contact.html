@@ -290,6 +290,29 @@
 									</div>
 									<div class="input-wrap text-center">
 										<input type="submit" name="" value="Submit" class="btn btn-large btn-orange">
+										<div class="loading-spinner-wrapper" id="app-loader">
+									        <span class="loading-spinner">
+									          <i class="one"></i>
+									          <i class="two"></i>
+									          <i class="three"></i>
+									        </span>
+									    </div>
+
+									    <style type="text/css">
+									    		.loading-spinner-wrapper {
+									    			position: absolute;
+												    height: 100%;
+												    background: #fff;
+												    margin-top: 0;
+												    display: none;
+												    visibility: hidden;
+									    		}
+
+									    		.loading-spinner-wrapper.active {
+												    display: block;
+												    visibility: visible;
+									    		}
+									    </style>
 									</div>
 								</form>
 							</div>

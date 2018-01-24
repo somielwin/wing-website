@@ -165,18 +165,19 @@
 
 /* Overlay helper */
 
-.fancybox-lock {
+/*.fancybox-lock {
     overflow: visible !important;
     width: auto;
 }
 
 .fancybox-lock body {
     overflow: hidden !important;
+    position: relative !important;
 }
 
 .fancybox-lock-test {
     overflow-y: hidden !important;
-}
+}*/
 
 .fancybox-overlay {
 	position: absolute;

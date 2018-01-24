@@ -41,7 +41,8 @@ $(document).ready(function(){
         }
 
         if( IsEmail($('#c-account-email').val()) && !$('#full-name').val() == '' && $('#c-contact-message').val() != '' && $('#inquiry-type').val() != 0 ) {
-            $('#contactForm').submit();
+            $('.loading-spinner-wrapper').addClass('active');
+            //$('#contactForm').submit();
 
             return false;
         } else {

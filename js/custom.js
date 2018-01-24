@@ -57,6 +57,10 @@ $(window).resize(function() {
 $(document).ready(function() {
 	initCustomForm();
 
+	setTimeout(function(){
+		$('.sec-pad').css({'opacity' : 1});
+	}, 200);
+
 	if (Modernizr.touch) {
 		$('html').addClass('bp-touch');
 	}
@@ -209,14 +213,14 @@ $(window).load(function() {
 	resize();
 
 	// preloader once done
-	Pace.on('done', function() {
-		// totally hide the preloader especially for IE
-		setTimeout(function() {
-			$('.pace-inactive').hide();
-			$('header').addClass('is-animated');
+	// Pace.on('done', function() {
+	// 	// totally hide the preloader especially for IE
+	// 	setTimeout(function() {
+	// 		$('.pace-inactive').hide();
+	// 		$('header').addClass('is-animated');
 
-		}, 500);
-	});
+	// 	}, 500);
+	// });
 
 	setTimeout(function(){
 		$('body').css({'background' : '#ffffff'});

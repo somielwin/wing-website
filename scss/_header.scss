@@ -8,6 +8,7 @@ html, body {
 	line-height: 1.4;
 	font-size: 16px;
 	-webkit-text-size-adjust: none;
+	margin-left: 0 !important;
 }
 
 body.window {
@@ -208,7 +209,6 @@ header {
 	.get-wing-app {
 		float: none;
 		margin: 10px;
-		border: 1px solid $coOrange;
 		font-weight: 500;
 	}
 
@@ -464,7 +464,7 @@ header {
 	}
 
 	.container {
-		padding-left: 200px;
+		padding-left: 180px;
 	}
 
 
@@ -838,6 +838,13 @@ header {
 
 					&:before {
 						background: $coGreen;
+					}
+				}
+
+				&:hover {
+
+					a {
+						font-weight: 700;
 					}
 				}
 			}
