@@ -8986,6 +8986,15 @@ body:lang(km) .sec-menu ul li > a {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 10px; }
+    @media (max-width: 1024px) {
+      .h-news-item h5 {
+        font-size: 16px; } }
+    @media (max-width: 992px) {
+      .h-news-item h5 {
+        font-size: 14px; } }
+    @media (max-width: 767px) {
+      .h-news-item h5 {
+        font-size: 16px; } }
   .h-news-item p {
     padding: 6px 25px;
     font-size: 18px; }
@@ -9025,10 +9034,10 @@ body:lang(km) .sec-menu ul li > a {
   padding: 10px 15px 25px 15px;
   margin-bottom: 25px;
   height: 0;
+  border-radius: 6px;
   padding-bottom: 61.6%; }
   .rates-wrap p:first-child {
-    margin-bottom: 15px;
-    padding-top: 0px; }
+    margin-bottom: 15px; }
     @media (max-width: 992px) {
       .rates-wrap p:first-child {
         margin-bottom: 10px;
@@ -9040,8 +9049,14 @@ body:lang(km) .sec-menu ul li > a {
     border: none;
     border-bottom: 1px solid #ffffff; }
   .rates-wrap p {
-    font-size: 15px;
-    padding-bottom: 0; }
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0; }
+    @media (max-width: 1024px) {
+      .rates-wrap p {
+        font-size: 15px;
+        padding-top: 10px; } }
   .rates-wrap .rates-value {
     letter-spacing: -0.5px;
     font-weight: 700;
@@ -9055,43 +9070,26 @@ body:lang(km) .sec-menu ul li > a {
   .rates-wrap h3 {
     width: 50%;
     float: left;
-    background: #1baae7;
-    background: -moz-linear-gradient(-45deg, #1baae7 0%, #1478a3 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, #1baae7), color-stop(100%, #1478a3));
-    background: -webkit-linear-gradient(-45deg, #1baae7 0%, #1478a3 100%);
-    background: -o-linear-gradient(-45deg, #1baae7 0%, #1478a3 100%);
-    background: -ms-linear-gradient(-45deg, #1baae7 0%, #1478a3 100%);
-    background: -webkit-linear-gradient(315deg, #1baae7 0%, #1478a3 100%);
-    background: -o-linear-gradient(315deg, #1baae7 0%, #1478a3 100%);
-    background: linear-gradient(135deg, #1baae7 0%, #1478a3 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1baae7', endColorstr='#1478a3', GradientType=1 );
-    padding-bottom: 45%;
+    background: #00adef;
+    padding-bottom: 40%;
     height: 0;
     position: relative;
     left: 0;
     border-radius: 6px;
     z-index: 4; }
     .rates-wrap h3.sell-rate {
-      background: #f48e28;
-      background: -moz-linear-gradient(-45deg, #f48e28 0%, #f28824 100%);
-      background: -webkit-gradient(left top, right bottom, color-stop(0%, #f48e28), color-stop(100%, #f28824));
-      background: -webkit-linear-gradient(-45deg, #f48e28 0%, #f28824 100%);
-      background: -o-linear-gradient(-45deg, #f48e28 0%, #f28824 100%);
-      background: -ms-linear-gradient(-45deg, #f48e28 0%, #f28824 100%);
-      background: -webkit-linear-gradient(315deg, #f48e28 0%, #f28824 100%);
-      background: -o-linear-gradient(315deg, #f48e28 0%, #f28824 100%);
-      background: linear-gradient(135deg, #f48e28 0%, #f28824 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f48e28', endColorstr='#f28824', GradientType=1 );
+      background: #ffffff;
       position: relative;
       left: -10px;
       margin-top: 10px;
       margin-left: 0;
-      z-index: 1; }
+      z-index: 1;
+      color: #00adef; }
     .rates-wrap h3 label {
       display: block;
       font-size: 20px;
-      text-transform: uppercase;
-      opacity: 0.8; }
+      font-weight: 700;
+      text-transform: uppercase; }
       @media (max-width: 992px) {
         .rates-wrap h3 label {
           font-size: 14px; } }

@@ -1,0 +1,9 @@
+.promo-listings-omc {
+	padding-top: 30px;
+	width: auto;
+	margin: 0px -15px;
+}
+
+.promo-listings-omc .owl-dots .owl-dot {
+	margin: 20px 5px 0;
+}

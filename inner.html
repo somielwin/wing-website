@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css" media="all" />
+    <link rel="stylesheet" href="css/new-style.css" media="all" />
     <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
     <script src="js/html5.js"></script>
     <script src="js/lib/modernizr-2.8.3.min.js"></script>
@@ -98,7 +99,8 @@
                                     <li><a href="#section3">Pin Code</a></li>
                                 </ul>
                             </div>
-                            <a href="#" class="btn apply-btn">Apply Now</a>
+                            
+                            <a href="#" class="btn apply-btn">Download the App Now!</a>
                         </div>
                     </div>
                 </div>
@@ -140,26 +142,48 @@
                         </div>
                     </div>
                 </div>
-                <div class="layout-1  ">
+                <div class="layout-1">
                     <div class="container">
-                        <div class="owl-carousel owl-theme partners-gallery">
-                            <div class="item">
-                                <div class="partners-img-wrap"><img src="images/cellcard-logo.jpg"></div>
+                        <h2>Promo Listings</h2>
+                        <pre>Lorem ipsum dolor sit amet, consectetur adipisicing elit</pre>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo   </p>
+                    </div>
+                    <div class="container max-container">
+                        
+                        <div class="owl-carousel owl-theme promo-listings-omc">
+                            <div class="item text-center">
+                                <div class="partners-img-wrap"><img src="http://wing.searchoptmedia.com/wp-content/uploads/2017/11/IMG_7129-1-1024x683.jpg"></div>
+                                <div class="pl-omc">
+                                    <h5>Cool and awesome promo title here</h5>
+                                    <p>Astonishing mini description here.</p>
+                                    <a href="" class="a-link">Read More</a>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="partners-img-wrap"><img src="images/metfone-logo.jpg"></div>
+                            <div class="item text-center">
+                                <div class="partners-img-wrap"><img src="http://wing.searchoptmedia.com/wp-content/uploads/2018/01/sentosa_grouped.jpg"></div>
+                                <div class="pl-omc">
+                                    <h5>Cool and awesome promo title here</h5>
+                                    <p>Astonishing mini description here.</p>
+                                    <a href="" class="a-link">Read More</a>
+                                </div>
                             </div>
-                            <div class="item">
+                            <div class="item text-center">
                                 <div class="partners-img-wrap"><img src="images/cootel-logo.jpg"></div>
+                                <div class="pl-omc">
+                                    <h5>Cool and awesome promo title here</h5>
+                                    <p>Astonishing mini description here.</p>
+                                    <a href="" class="a-link">Read More</a>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="partners-img-wrap"><img src="images/qb-logo.jpg"></div>
-                            </div>
-                            <div class="item">
-                                <div class="partners-img-wrap"><img src="images/smart-logo.jpg"></div>
-                            </div>
-                            <div class="item">
-                                <div class="partners-img-wrap"><img src="images/seatel-logo.jpg"></div>
+                            <div class="item text-center">
+                                <div class="partners-img-wrap"><img src="images/cootel-logo.jpg"></div>
+                                <div class="pl-omc">
+                                    <h5>Cool and awesome promo title here</h5>
+                                    <p>Astonishing mini description here.</p>
+                                    <a href="" class="a-link">Read More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -762,6 +786,31 @@
             },
             1000: {
                 items: 5
+            }
+        }
+    })
+
+
+    $('.promo-listings-omc').owlCarousel({
+        loop: true,
+        margin: 20,
+        center: true,
+        nav: false,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+
+            480: {
+                items: 2
+            },
+
+            820: {
+                items: 2
+            },
+            1000: {
+                items: 3
             }
         }
     })

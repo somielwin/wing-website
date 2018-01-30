@@ -208,6 +208,18 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		margin-bottom: 10px;
+
+		@include breakpoint(desktop) {
+			font-size: 16px;
+		}
+
+		@include breakpoint(tablet) {
+			font-size: 14px;
+		}
+
+		@include breakpoint(tablet2) {
+			font-size: 16px;
+		}
 	}
 
 	p {
@@ -257,11 +269,11 @@
 	padding: 10px 15px 25px 15px;
 	margin-bottom: 25px;
 	height: 0;
+	border-radius: 6px;
 	padding-bottom: 61.6%;
 
 	p:first-child {
 		margin-bottom: 15px;
-		padding-top: 0px;
 
 		@include breakpoint(tablet) {
 			margin-bottom: 10px;
@@ -279,8 +291,15 @@
 	}
 
 	p {
-		font-size: 15px;
-		padding-bottom: 0;
+		font-size: 18px;
+		padding-top: 10px;
+		padding-left: 0;
+		padding-right: 0;
+
+		@include breakpoint(desktop) {
+			font-size: 15px;
+			padding-top: 10px;
+		}
 	}
 
 	.rates-value {
@@ -299,15 +318,8 @@
 	h3 {
 		width: 50%;
 		float: left;
-		background: rgba(27,170,231,1);
-		background: -moz-linear-gradient(-45deg, rgba(27,170,231,1) 0%, rgba(20,120,163,1) 100%);
-		background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(27,170,231,1)), color-stop(100%, rgba(20,120,163,1)));
-		background: -webkit-linear-gradient(-45deg, rgba(27,170,231,1) 0%, rgba(20,120,163,1) 100%);
-		background: -o-linear-gradient(-45deg, rgba(27,170,231,1) 0%, rgba(20,120,163,1) 100%);
-		background: -ms-linear-gradient(-45deg, rgba(27,170,231,1) 0%, rgba(20,120,163,1) 100%);
-		background: linear-gradient(135deg, rgba(27,170,231,1) 0%, rgba(20,120,163,1) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1baae7', endColorstr='#1478a3', GradientType=1 );
-		padding-bottom: 45%;
+		background: $coBlue;
+		padding-bottom: 40%;
 		height: 0;
 		position: relative;
 		left: 0;
@@ -315,26 +327,20 @@
 		z-index: 4;
 
 		&.sell-rate {
-			background: rgba(244,142,40,1);
-			background: -moz-linear-gradient(-45deg, rgba(244,142,40,1) 0%, rgba(242,136,36,1) 100%);
-			background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(244,142,40,1)), color-stop(100%, rgba(242,136,36,1)));
-			background: -webkit-linear-gradient(-45deg, rgba(244,142,40,1) 0%, rgba(242,136,36,1) 100%);
-			background: -o-linear-gradient(-45deg, rgba(244,142,40,1) 0%, rgba(242,136,36,1) 100%);
-			background: -ms-linear-gradient(-45deg, rgba(244,142,40,1) 0%, rgba(242,136,36,1) 100%);
-			background: linear-gradient(135deg, rgba(244,142,40,1) 0%, rgba(242,136,36,1) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f48e28', endColorstr='#f28824', GradientType=1 );
+			background: $coWhite;
 			position: relative;
 			left: -10px;
 			margin-top: 10px;
 			margin-left: 0;
 			z-index: 1;
+			color: $coBlue;
 		}
 
 		label {
 			display: block;
 			font-size: 20px;
+			font-weight: 700;
 			text-transform: uppercase;
-			opacity: 0.8;
 
 			@include breakpoint(tablet) {
 				font-size: 14px;
