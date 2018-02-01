@@ -35,6 +35,16 @@
 	margin-top: 60px;
 }
 
+.home-wrap-section .home-omc .layout-1 ul {
+	padding-right: 30px;
+}
+
+.home-wrap-section .home-omc .layout-1 ul li {
+	display: block;
+	float: none;
+	width: auto;
+}
+
 
 @media (max-width: 992px) {
 
@@ -61,4 +71,8 @@
 	.home-wrap-section #section-1.home-feature .sec-title {
 		text-align: center;
 	}
+
+	.home-wrap-section .home-omc .layout-1 ul {
+		padding-right: 0px;
+	} 
 }
