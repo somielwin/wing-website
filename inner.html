@@ -12,12 +12,12 @@
     <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
     <script src="js/html5.js"></script>
     <script src="js/lib/modernizr-2.8.3.min.js"></script>
-    <script src="js/pace.min.js"></script>
+    <!-- <script src="js/pace.min.js"></script> -->
 </head>
 
 <body>
     <section id="main-container">
-        <header class="training-module-header" style="position: relative; top: 0; box-shadow: none; margin-top:8px;">
+        <!-- <header class="training-module-header" style="position: relative; top: 0; box-shadow: none; margin-top:8px;">
             <div class="container" style="padding-left:0;">
                 <div class="logo" style="position:relative; top:0; margin-top: 0; float:left;">
                     <a href="http://wing.searchoptmedia.com/en/">                        <img src="http://wing.searchoptmedia.com/wp-content/themes/wing/assets/images/page_template/logo.png" alt="Wing">                </a></div>
@@ -46,13 +46,16 @@
                 </div>
                 <div class="clr"></div>
             </div>
-        </header>
+        </header> -->
         <div class="inner-browse-section">
             <div class="mobile-custom-dropdown js-mobile-custom-dropdown">
                 <span class="selected">Browse Section</span>
                 <ul class="custom-dropdown-menu js-custom-dropdown-menu">
                     <li><a href="#section1">Application</a></li>
-                    <li><a href="#section2">Getting Started</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">Thailand</a></li>
+                    <li><a href="#">HK</a></li>
+                    <li><a href="#">Japan</a></li>
                     <li><a href="#section3">Pin Code</a></li>
                 </ul>
             </div>
@@ -95,7 +98,16 @@
                             <div class="sec-menu">
                                 <ul>
                                     <li><a href="#section1">Application</a></li>
-                                    <li><a href="#section2">Getting Started</a></li>
+                                    <li class="has-sub"><a href="#">Countries</a>
+                                        <div class="has-sub-item">
+                                            <ul>
+                                                <li><a href="#section2">Japan</a></li>
+                                                <li><a href="#">Thailand</a></li>
+                                                <li><a href="#">Malaysia / Singapore</a></li>
+                                                <li><a href="#">Japan</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
                                     <li><a href="#section3">Pin Code</a></li>
                                 </ul>
                             </div>
@@ -717,10 +729,12 @@
     <script type="text/javascript">
     updateNav();
 
-    $('.sec-menu ul li > a').click(function(e) {
+    $('.sec-menu ul li:not(.has-sub) a').click(function(e) {
         e.preventDefault();
         var __this = $(this),
-            $targetDiv = $(__this.attr('href'));
+        $targetDiv = $(__this.attr('href'));
+
+        $('.has-sub-item').removeClass('displayed');
         $('.sec-menu ul li').removeClass('active');
         __this.parent().addClass('active');
         scrollToDiv($targetDiv, 0);
@@ -738,6 +752,12 @@
         // }
 
     });
+
+    $('.sec-menu ul li.has-sub > a').click(function(e) {
+        e.preventDefault();
+        $(this).siblings('.has-sub-item').addClass('displayed');
+    });
+
 
     $('.inner-browse-section .js-mobile-custom-dropdown li a').click(function() {
         var sitem = $(this).text(),
