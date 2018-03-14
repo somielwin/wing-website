@@ -45,7 +45,6 @@
 	width: auto;
 }
 
-
 .card-list .card-item-discount:before {
       top: 50%;
       margin-top: -27px; 
@@ -252,6 +251,23 @@
   display: block;
   margin-bottom: 8px;
 
+}
+
+.related-content .h-new-title {
+  border-top: none;
+  padding-top: 0;
+}
+
+.related-content {
+  padding-bottom: 0;
+}
+
+.related-content .h-news-item {
+  padding-bottom: 0;
+}
+
+.related-content .h-new-title {
+  padding-bottom: 20px;
 }
 
 @media (max-width: 992px) {
