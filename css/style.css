@@ -10128,6 +10128,56 @@ body:lang(km) .sec-menu ul li > a {
     -webkit-transform: translate3d(0px, 0px, 0px) !important;
     transform: translate3d(0px, 0px, 0px) !important; } }
 
+.omc-promo-listings {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0px -15px 50px; }
+  .omc-promo-listings:after {
+    content: '';
+    display: block;
+    float: none;
+    clear: both; }
+  .omc-promo-listings li {
+    width: 33.33%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: none; }
+    .omc-promo-listings li:nth-child(3n+1) {
+      clear: left; }
+    @media (max-width: 992px) {
+      .omc-promo-listings li {
+        width: 50%; }
+        .omc-promo-listings li:nth-child(3n+1) {
+          clear: none; }
+        .omc-promo-listings li:nth-child(2n+1) {
+          clear: left; } }
+    @media (max-width: 640px) {
+      .omc-promo-listings li {
+        width: 100%; }
+        .omc-promo-listings li:nth-child(2n+1) {
+          clear: none; } }
+    .omc-promo-listings li:before {
+      display: none !important; }
+  @media (max-width: 640px) {
+    .omc-promo-listings .news-item {
+      max-width: 310px;
+      margin-right: auto;
+      margin-left: auto; } }
+  .omc-promo-listings .partners-img-wrap img {
+    max-width: 100%;
+    height: auto;
+    display: block; }
+  .omc-promo-listings .pl-omc {
+    text-align: center; }
+    .omc-promo-listings .pl-omc h5 {
+      color: #00adef;
+      margin-bottom: 5px;
+      margin-top: 0px; }
+    .omc-promo-listings .pl-omc p {
+      padding: 6px 25px;
+      font-size: 16px; }
+
 .row-careers-bg a {
   color: #ffffff; }
 
